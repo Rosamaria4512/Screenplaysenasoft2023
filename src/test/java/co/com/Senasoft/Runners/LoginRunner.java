@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         glue = "co.com.Senasoft.StepsDefinitions",
         strict = false,
         plugin = "pretty",
-        tags = "@incompletelogin"
+        tags = "@caerrental"
 )
 public class LoginRunner {
 }

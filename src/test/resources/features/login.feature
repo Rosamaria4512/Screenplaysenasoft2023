@@ -4,7 +4,19 @@ Feature: login
   Background:
     Given he user enters the website
 
-@wronglogin
+    @login_correct
+      Scenario Outline: Login Successfully
+      When he user enters the website with correct credential
+        | email   | password   |
+        | <email> | <password> |
+      Then he entry succesfully
+
+      Examples:
+        | email                   | password   |
+        | lenovo.esucre@gmail.com | 3Felipe180 |
+
+
+  @wronglogin
   Scenario:Wrong Login
     When he clicks on the login type your credentials incorrectly
       | email                    | password   |

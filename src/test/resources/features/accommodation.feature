@@ -8,7 +8,7 @@ Feature: Accommodation
     Then he will have reserved a place of accommodation
 
 
- # Scenario: Book a failed accommodation
+   Scenario: Book a failed accommodation
     Given the user Enter the website
     When he clicks on the "Accommodations" option and writes the incomplete specifications
     Then he will see an incomplete field message

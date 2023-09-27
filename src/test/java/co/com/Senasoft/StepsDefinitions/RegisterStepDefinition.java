@@ -79,11 +79,7 @@ public class RegisterStepDefinition {
 
         System.out.println("Hubo un Registro Incorrecto con validacion correcta");
     }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 3e56b515daae379a367802f829950a206aebacdf
 }
 
 
