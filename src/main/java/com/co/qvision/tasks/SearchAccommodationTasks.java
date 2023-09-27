@@ -15,11 +15,7 @@ public class SearchAccommodationTasks implements Task {
         //Les asignamos una accion, como de recibir texto o u vlick
         actor.attemptsTo(Click.on(AccommodationPage.BTN_IGNORE));
         //Este metodo se usa para controlar el tiempo entre cada  paso se realise para que la automatizacion se un poco mas pausada
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+
         actor.attemptsTo(Enter.keyValues("New York").into(AccommodationPage.TXT_PLACE));
         actor.attemptsTo(Click.on(AccommodationPage.SPAN_DATE));
         actor.attemptsTo(Click.on(AccommodationPage.TXT_CHECK_IN));
@@ -32,21 +28,18 @@ public class SearchAccommodationTasks implements Task {
         actor.attemptsTo(Click.on(AccommodationPage.SLT_EDAD_1));
         actor.attemptsTo(Click.on(AccommodationPage.OPT_EDAD_1));
         actor.attemptsTo(Click.on(AccommodationPage.BTN_PERSONS));
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+
         actor.attemptsTo(Click.on(AccommodationPage.SLT_EDAD_1));
         actor.attemptsTo(Click.on(AccommodationPage.OPT_EDAD_1));
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+
         actor.attemptsTo(Click.on(AccommodationPage.SPAN_ROMS));
         actor.attemptsTo(Click.on(AccommodationPage.BTN_DONE));
         actor.attemptsTo(Click.on(AccommodationPage.BTN_SEARCH));
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
     }
     public static SearchAccommodationTasks searchAccommodationTasks(){

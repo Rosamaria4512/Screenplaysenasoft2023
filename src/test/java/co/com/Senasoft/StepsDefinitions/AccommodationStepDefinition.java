@@ -4,6 +4,7 @@ import com.co.qvision.questions.VerifyBookFailed;
 import com.co.qvision.tasks.AccommodationFailedTask;
 import com.co.qvision.tasks.AccommodationTask;
 import com.co.qvision.tasks.SearchAccommodationTasks;
+import com.co.qvision.tasks.SearchByFiltersTask;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.*;
 import net.serenitybdd.screenplay.GivenWhenThen;
@@ -30,9 +31,8 @@ public class AccommodationStepDefinition {
 
     }
 
-
-    @When("^he clicks on the \"([^\"]*)\" option$")
-    public void heClicksOnTheOption(String arg1) {
+    @When("^he clicks on the Accommodations option$")
+    public void heClicksOnTheAccommodationsOption() {
         OnStage.theActorInTheSpotlight().attemptsTo(SearchAccommodationTasks.searchAccommodationTasks());
 
     }
@@ -42,10 +42,12 @@ public class AccommodationStepDefinition {
     OnStage.theActorInTheSpotlight().attemptsTo(AccommodationTask.accommodationTask());
     }
 
+
     @Then("^he will have reserved a place of accommodation$")
     public void heWillHaveReservedAPlaceOfAccommodation() {
 
     }
+    //----------------------------------------------------------------------------------------------------------------
 
 
     //----Los siguientes pasos o acciones son aquellas que fueron diseñadas para crear una prueba orientada a la falla,
@@ -59,6 +61,23 @@ public class AccommodationStepDefinition {
     @Then("^he will see an incomplete field message$")
     public void heWillSeeAnIncompleteFieldMessage() {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerifyBookFailed.verifyBookFailed(), Matchers.equalTo(Boolean.TRUE)));
+
+    }
+    //----------------------------------------------------------------------------------------------------------------------------------------------
+    @When("^the is in the Results module and select several filters$")
+    public void theIsInTheResultsModuleAndSelectSeveralFilters() {
+        OnStage.theActorInTheSpotlight().attemptsTo(SearchAccommodationTasks.searchAccommodationTasks());
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        OnStage.theActorInTheSpotlight().attemptsTo(SearchByFiltersTask.searchByFiltersTask());
+    }
+
+
+    @Then("^He will see the new results obtained by applying the filters$")
+    public void heWillSeeTheNewResultsObtainedByApplyingTheFilters() {
 
     }
 }
