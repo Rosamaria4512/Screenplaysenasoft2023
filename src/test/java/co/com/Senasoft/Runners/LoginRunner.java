@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
         snippets = SnippetType.CAMELCASE,
         glue = "co.com.Senasoft.StepsDefinitions",
         strict = false,
-        plugin = "pretty",
-        tags = "@caerrental"
+        plugin = "pretty"
+        //tags = "@incompletelogin"
 )
 public class LoginRunner {
 }

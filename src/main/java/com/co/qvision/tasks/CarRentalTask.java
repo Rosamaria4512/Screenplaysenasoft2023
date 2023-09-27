@@ -31,14 +31,19 @@ public class CarRentalTask implements Task {
                 Click.on(CarRentalPage.BTN_CAR_RENTAL),
                 Click.on(CarRentalPage.BTN_CITY),
                 Enter.theValue(dataCarRental.getCity()).into(CarRentalPage.TXT_CITY),
-                Click.on(CarRentalPage.BTN_CAR_RENTAL),
-                Click.on(CarRentalPage.BTN_CAR_RENTAL),
-                Click.on(CarRentalPage.BTN_CAR_RENTAL),
+                Click.on(CarRentalPage.TXT_CITY2),
                 Click.on(CarRentalPage.BTN_DATE),
                 Click.on(CarRentalPage.BTN_DAY),
                 Click.on(CarRentalPage.BTN_DAY2),
+                Click.on(CarRentalPage.BTN_HOUR),
+                Click.on(CarRentalPage.BTN_HOUR2),
                 Click.on(CarRentalPage.BTN_SEARCH)
                 );
+        try {
+            Thread.sleep(15000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
 
     }

@@ -8,14 +8,13 @@ Feature: Accommodation
     And the search and select one of the results
     Then he will have reserved a place of accommodation
 
-<<<<<<< HEAD
 
    Scenario: Book a failed accommodation
-=======
+
 #Completed
   @Incompletereservation
  Scenario: Book a failed accommodation
->>>>>>> e73995abbc9561e3b288185fd5db4453192ff88b
+
     Given the user Enter the website
     When he clicks on the "Accommodations" option and writes the incomplete specifications
     Then he will see an incomplete field message
