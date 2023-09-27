@@ -2,15 +2,14 @@ package co.com.Senasoft.StepsDefinitions;
 
 import com.co.qvision.models.CredentialLoginCorrectly;
 import com.co.qvision.models.DataRegister;
-<<<<<<< HEAD
 import com.co.qvision.questions.VerifyBookFailed;
 import com.co.qvision.questions.VerifyRegisterCorrect;
 import com.co.qvision.tasks.AccommodationFailedTask;
-=======
+
 import com.co.qvision.models.DataRegisterIncorrectly;
 import com.co.qvision.questions.VerifyRegisterCorrect;
 import com.co.qvision.tasks.RegisterIncorrectlyTask;
->>>>>>> 600aa08eb140782e3111e1898d0cefc36b80f9ca
+
 import com.co.qvision.tasks.RegisterTask;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -62,20 +61,11 @@ public class RegisterStepDefinition {
     @Then("^he makes a successful record\\.$")
     public void heMakesASuccessfulRecord() {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerifyRegisterCorrect.validationregister()
-<<<<<<< HEAD
                 , Matchers.equalTo(Boolean.TRUE)));
-
-    }
-
-
-}
-=======
-        , Matchers.equalTo(Boolean.FALSE)));
-
         System.out.println("Hubo un Registro exitoso con validacion correcta");
 
-    }
 
+    }
     @When("^he enters incorrect data$")
     public void heEntersIncorrectData(List<DataRegisterIncorrectly> dataRegisterIncorrectlyList) {
         DataRegisterIncorrectly dataRegisterIncorrectly;
@@ -90,6 +80,16 @@ public class RegisterStepDefinition {
     }
 
 
-
 }
->>>>>>> 600aa08eb140782e3111e1898d0cefc36b80f9ca
+
+
+
+
+
+
+
+
+
+
+
+

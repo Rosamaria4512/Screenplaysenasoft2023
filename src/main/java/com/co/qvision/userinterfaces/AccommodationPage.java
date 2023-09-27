@@ -24,8 +24,8 @@ public class AccommodationPage {
     public static final Target BTN_DONE=Target.the("Boton guardar").locatedBy("(//button[@type='button'])[15]");
     public static final Target BTN_SEARCH=Target.the("Boton Buscar").locatedBy("//button[@type='submit']");
     public static final Target CARD_PRODUCT_1=Target.the("Targeta del producto").locatedBy("(//div[@data-testid='property-card'])[1]");
-    public static final Target CART_1=Target.the("Contenedor de productos 1").locatedBy("(//h3[text()='Sostenimiento']");
-    public static final Target CART_2=Target.the("Contendor de productos 2").locatedBy("(//h3[text()='Categoría de alojamiento']");
+    public static final Target CART_1=Target.the("Contenedor de productos 1").locatedBy("(//div[@data-testid='property-card'])[2]");
+    public static final Target CART_2=Target.the("Contendor de productos 2").locatedBy("(//div[@data-testid='property-card'])[3]");
 
     public static final Target DIV_FILTER=Target.the("Agregar filtos").locatedBy("(//div[@id='filter_group_class_:rad:'])");
     public static final Target OP_FILTER=Target.the("Agregar filtos").locatedBy("(//input[@name='class=3'])[2]");

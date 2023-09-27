@@ -20,7 +20,7 @@ public class AccommodationTask implements Task {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        actor.attemptsTo(Scroll.to(AccommodationPage.TXT_1),Scroll.to(AccommodationPage.TXT_2));
+        actor.attemptsTo(Scroll.to(AccommodationPage.CART_1),Scroll.to(AccommodationPage.CART_2));
 
         actor.attemptsTo(Click.on(AccommodationPage.OP_FILTER));
         try {
