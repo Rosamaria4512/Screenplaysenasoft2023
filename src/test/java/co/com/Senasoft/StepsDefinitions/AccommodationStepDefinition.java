@@ -1,10 +1,7 @@
 package co.com.Senasoft.StepsDefinitions;
 
 import com.co.qvision.questions.VerifyBookFailed;
-import com.co.qvision.tasks.AccommodationFailedTask;
-import com.co.qvision.tasks.AccommodationTask;
-import com.co.qvision.tasks.SearchAccommodationTasks;
-import com.co.qvision.tasks.SearchByFiltersTask;
+import com.co.qvision.tasks.*;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.*;
 import net.serenitybdd.screenplay.GivenWhenThen;
@@ -65,7 +62,7 @@ public class AccommodationStepDefinition {
     }
     //----------------------------------------------------------------------------------------------------------------------------------------------
     @When("^the is in the Results module and select several filters$")
-    public void theIsInTheResultsModuleAndSelectSeveralFilters() {
+    public void theIsInTheResultsModuleAndSelectSeveralFilters() throws InterruptedException {
         OnStage.theActorInTheSpotlight().attemptsTo(SearchAccommodationTasks.searchAccommodationTasks());
         try {
             Thread.sleep(2000);
@@ -73,6 +70,8 @@ public class AccommodationStepDefinition {
             throw new RuntimeException(e);
         }
         OnStage.theActorInTheSpotlight().attemptsTo(SearchByFiltersTask.searchByFiltersTask());
+        OnStage.theActorInTheSpotlight().attemptsTo(AddFavoritesTask.addFavoritesTask());
+        Thread.sleep(99000);
     }
 
 

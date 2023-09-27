@@ -16,7 +16,13 @@ public class SearchByFiltersTask implements Task {
         actor.attemptsTo(Scroll.to(AccommodationPage.DIV_FILTRES_POPULAR));
         try {Thread.sleep(3000);} catch (InterruptedException e) {throw new RuntimeException(e);}
 
-        actor.attemptsTo(Click.on(AccommodationPage.SLT_FILTER_1));
+        actor.attemptsTo(Click.on(AccommodationPage.SLT_FILTER_1),Scroll.to(AccommodationPage.SLT_FILTER_2));
+        try {Thread.sleep(3000);} catch (InterruptedException e) {throw new RuntimeException(e);}
+
+        actor.attemptsTo(Click.on(AccommodationPage.SLT_FILTER_2),Scroll.to(AccommodationPage.SLT_FILTER_3));
+        try {Thread.sleep(3000);} catch (InterruptedException e) {throw new RuntimeException(e);}
+
+        actor.attemptsTo(Click.on(AccommodationPage.SLT_FILTER_3));
         try {Thread.sleep(3000);} catch (InterruptedException e) {throw new RuntimeException(e);}
 
     }
