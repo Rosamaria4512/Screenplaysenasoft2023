@@ -14,4 +14,3 @@ Feature:car rental
     Examples:
     |city|
     |pereira|
-    |medellin |

@@ -14,13 +14,17 @@ public class CarRentalPage {
     public static final Target TXT_CITY2 = Target.the("da click")
             .locatedBy("//span[@data-testid='badge']");
 
-
     public static final Target BTN_DATE = Target.the("CLICK PARA ESCOGER FECHA")
             .locatedBy("//button[@id='searchbox-toolbox-date-picker-pickup-date']");
     public static final Target BTN_DAY= Target.the("CLICK PARA ESOCGER EL DIA")
             .locatedBy("//span[@data-date='2023-09-27']");
     public static final Target BTN_DAY2= Target.the("CLICK PARA ESOCGER EL DIA de regreso")
             .locatedBy("//span[@data-date='2023-10-23']");
+    public static final Target BTN_HOUR= Target.the("CLICK PARA ESOCGER HORA")
+            .locatedBy("//select[@name='dropoff-time']");
+    public static final Target BTN_HOUR2= Target.the("CLICK PARA ESOCGER HORA DE REGRESOo")
+            .locatedBy("//option[@value='17:00']");
+
     public static final Target BTN_SEARCH= Target.the("CLICK BOTON BUSCAR")
             .locatedBy("//button[@data-testid='searchbox-toolbox-submit-button']");
 

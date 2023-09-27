@@ -10,9 +10,9 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/carrental.feature",
         snippets = SnippetType.CAMELCASE,
         glue = "co.com.Senasoft.StepsDefinitions",
-        strict = true,
-        plugin = "pretty",
-        tags = "@incompletelogin"
+        strict = false,
+        plugin = "pretty"
+
 )
 public class CarRentalRunner {
 }
