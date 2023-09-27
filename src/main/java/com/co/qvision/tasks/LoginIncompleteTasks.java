@@ -14,6 +14,11 @@ public class LoginIncompleteTasks  implements Task {
 
     //variable que nos permite traer los datos de la clase DataWrongLogin
     DataLoginIncomplete dataLoginIncomplete;
+
+    public LoginIncompleteTasks(DataLoginIncomplete dataLoginIncomplete) {
+        this.dataLoginIncomplete = dataLoginIncomplete;
+    }
+
     //damos actividad al actor con cada localizador correspodiente instanciando desde la clase LoginPage
     @Override
     public <T extends Actor> void performAs(T actor) {

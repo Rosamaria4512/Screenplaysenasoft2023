@@ -1,6 +1,8 @@
 package co.com.Senasoft.StepsDefinitions;
 
+import com.co.qvision.models.CredentialLoginCorrectly;
 import com.co.qvision.questions.VerifyBookFailed;
+import com.co.qvision.questions.VerifyElementsSaves;
 import com.co.qvision.tasks.*;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.*;
@@ -13,18 +15,22 @@ import net.thucydides.core.annotations.Managed;
 import org.hamcrest.Matchers;
 import org.openqa.selenium.WebDriver;
 
+import java.util.List;
+
 public class AccommodationStepDefinition {
     @Managed
     WebDriver webDriver;
+
     @Before
-    public void setup(){
+    public void setup() {
         OnStage.setTheStage(Cast.ofStandardActors());
         OnStage.theActorCalled("User");
         OnStage.theActorInTheSpotlight().can(BrowseTheWeb.with(webDriver));
     }
+
     @Given("^the user Enter the website$")
     public void theUserEnterTheWebsite() {
-    OnStage.theActorInTheSpotlight().attemptsTo(Open.url("https://www.booking.com/"));
+        OnStage.theActorInTheSpotlight().attemptsTo(Open.url("https://www.booking.com/"));
 
     }
 
@@ -36,7 +42,7 @@ public class AccommodationStepDefinition {
 
     @When("^the search and select one of the results$")
     public void theSearchAndSelectOneOfTheResults() {
-    OnStage.theActorInTheSpotlight().attemptsTo(AccommodationTask.accommodationTask());
+        OnStage.theActorInTheSpotlight().attemptsTo(AccommodationTask.accommodationTask());
     }
 
 
@@ -60,9 +66,15 @@ public class AccommodationStepDefinition {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerifyBookFailed.verifyBookFailed(), Matchers.equalTo(Boolean.TRUE)));
 
     }
+
     //----------------------------------------------------------------------------------------------------------------------------------------------
     @When("^the is in the Results module and select several filters$")
-    public void theIsInTheResultsModuleAndSelectSeveralFilters() throws InterruptedException {
+    //Aqui usamos un modelo de datos que nos permite ingresar datos desde los features con el  modulo de CredentialLoginCorrectly
+    public void theIsInTheResultsModuleAndSelectSeveralFilters(List<CredentialLoginCorrectly> credentialLoginCorrectlyList) {
+
+        CredentialLoginCorrectly credentialLoginCorrectly;
+        credentialLoginCorrectly = credentialLoginCorrectlyList.get(0);
+
         OnStage.theActorInTheSpotlight().attemptsTo(SearchAccommodationTasks.searchAccommodationTasks());
         try {
             Thread.sleep(2000);
@@ -71,12 +83,16 @@ public class AccommodationStepDefinition {
         }
         OnStage.theActorInTheSpotlight().attemptsTo(SearchByFiltersTask.searchByFiltersTask());
         OnStage.theActorInTheSpotlight().attemptsTo(AddFavoritesTask.addFavoritesTask());
-        Thread.sleep(99000);
+        OnStage.theActorInTheSpotlight().attemptsTo(LoginCorrecTask.incomplete(credentialLoginCorrectly));
+        OnStage.theActorInTheSpotlight().attemptsTo(OpenModuleSaveTask.openModuleSaveTask());
+
+
     }
 
 
     @Then("^He will see the new results obtained by applying the filters$")
     public void heWillSeeTheNewResultsObtainedByApplyingTheFilters() {
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerifyElementsSaves.verifyElementsSaves(),Matchers.equalTo(Boolean.TRUE)));
 
     }
 }

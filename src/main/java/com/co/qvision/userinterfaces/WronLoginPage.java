@@ -12,6 +12,8 @@ public class WronLoginPage {
             .locatedBy("//input[@name='username']");
     public static final Target BTN_CONTINUED= Target.the("click en continuar por correo")
             .locatedBy("//body/div[@id='root']/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[3]/button[1]");
+    public static final Target TXT_PASSWORD= Target.the("campo para ingresar contrasena")
+            .locatedBy("//button[@type='submit']");
 
 
 }
