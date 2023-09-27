@@ -1,7 +1,9 @@
 package co.com.Senasoft.StepsDefinitions;
 
 import com.co.qvision.models.DataRegister;
+import com.co.qvision.questions.VerifyBookFailed;
 import com.co.qvision.questions.VerifyRegisterCorrect;
+import com.co.qvision.tasks.AccommodationFailedTask;
 import com.co.qvision.tasks.RegisterTask;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -24,12 +26,12 @@ public class RegisterStepDefinition {
     WebDriver hisBowser;
 
     @Before
-    public void setUp()
-    {
+    public void setUp() {
         OnStage.setTheStage(Cast.ofStandardActors());
         OnStage.theActorCalled("User");
         OnStage.theActorInTheSpotlight().can(BrowseTheWeb.with(hisBowser));
     }
+
     @Given("^he user enters the website$")
     public void heUserEntersTheWebsite() {
         OnStage.theActorInTheSpotlight().attemptsTo(Open.url("https://www.booking.com/index.es.html?label=es-co-booking-desktop-QLGRvVsXz2aps*_lUmd*1gS652804041077%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-102518000%3Alp1003665%3Ali%3Adec%3Adm&gclid=CjwKCAjwgsqoBhBNEiwAwe5w077TiV0TUdUzYfYh1-6VJKeaKbN97OQud8lSIPgn5wWrkdyjhOGSYRoCtLEQAvD_BwE&aid=2336990&sid=91faa5accfec39eacfbf6ac0adf3e1d7"));
@@ -38,9 +40,9 @@ public class RegisterStepDefinition {
 
 
     @When("^he enters correct data$")
-    public void heEntersCorrectData(List<DataRegister>dataRegisterList) {
+    public void heEntersCorrectData(List<DataRegister> dataRegisterList) {
         DataRegister dataRegister;
-        dataRegister=dataRegisterList.get(0);
+        dataRegister = dataRegisterList.get(0);
         OnStage.theActorInTheSpotlight().attemptsTo(RegisterTask.register(dataRegister));
 
 
@@ -49,7 +51,9 @@ public class RegisterStepDefinition {
     @Then("^he makes a successful record\\.$")
     public void heMakesASuccessfulRecord() {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerifyRegisterCorrect.validationregister()
-        , Matchers.equalTo(Boolean.TRUE)));
+                , Matchers.equalTo(Boolean.TRUE)));
 
     }
+
+
 }
