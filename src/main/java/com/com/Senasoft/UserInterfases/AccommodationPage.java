@@ -28,6 +28,9 @@ public class AccommodationPage {
     public static final Target CARD_PRODUCT=Target.the("Targeta del producto").locatedBy("(//div[@data-testid='property-card'])[2]");
     public static final Target SLT_HOTEL=Target.the("Seleccionar hotel").locatedBy("(//div[@data-testid='property-card'])[18]");
     public static final Target BTN_RESERV=Target.the("HACER LA RESERVA DEL HOTEL").locatedBy("//button[@id='hp_book_now_button']");
+    public static final Target SLT_AMOUNT=Target.the("Seleccionar el monto").locatedBy("//select[@name='nr_rooms_688074501_285610330_2_2_0']");
+    public static final Target OPT_AMOUTNT=Target.the("Escojer monto").locatedBy("(//option[@value='4'])[5]");
+
 
 }
 
