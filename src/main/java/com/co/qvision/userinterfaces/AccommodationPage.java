@@ -1,4 +1,4 @@
-package com.com.Senasoft.UserInterfases;
+package com.co.qvision.userinterfaces;
 
 import net.serenitybdd.screenplay.targets.Target;
 
