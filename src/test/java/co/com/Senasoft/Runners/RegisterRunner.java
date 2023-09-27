@@ -9,9 +9,10 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/register.feature",
         snippets = SnippetType.CAMELCASE,
-        glue = "com.co.Senasoft.stepdefinitions",
+        glue = "co.com.Senasoft.StepsDefinitions",
         strict = false,
-        plugin = "pretty"
+        plugin = "pretty",
+        tags = "@incorrectregistration"
 )
 public class RegisterRunner {
 }
