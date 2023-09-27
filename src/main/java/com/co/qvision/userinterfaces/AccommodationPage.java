@@ -24,8 +24,8 @@ public class AccommodationPage {
     public static final Target BTN_DONE=Target.the("Boton guardar").locatedBy("(//button[@type='button'])[15]");
     public static final Target BTN_SEARCH=Target.the("Boton Buscar").locatedBy("//button[@type='submit']");
     public static final Target CARD_PRODUCT_1=Target.the("Targeta del producto").locatedBy("(//div[@data-testid='property-card'])[1]");
-    public static final Target TXT_1=Target.the("Texto 1").locatedBy("(//*[text()='Sostenimiento']");
-    public static final Target TXT_2=Target.the("Texto 2").locatedBy("(//*[text()='Categoría de alojamiento']");
+    public static final Target CART_1=Target.the("Contenedor de productos 1").locatedBy("(//h3[text()='Sostenimiento']");
+    public static final Target CART_2=Target.the("Contendor de productos 2").locatedBy("(//h3[text()='Categoría de alojamiento']");
 
     public static final Target DIV_FILTER=Target.the("Agregar filtos").locatedBy("(//div[@id='filter_group_class_:rad:'])");
     public static final Target OP_FILTER=Target.the("Agregar filtos").locatedBy("(//input[@name='class=3'])[2]");
@@ -41,6 +41,6 @@ public class AccommodationPage {
     public static final Target BTN_RESERVED=Target.the("Finalizar").locatedBy("(//button[@type='submit'])[3]");
 
     //-------------------------------------------------------------------Estos elementos son aquelos que se localizan en caso de que el esenario de prueba este orientado al error-----------------------------------------------------------------------------------------------------------------
-    public static final Target TXT_ERROR=Target.the("Texto de verifiacion de errores").locatedBy("//*[text()='Enter a destination to start searching.']");
+    public static final Target TXT_ERROR=Target.the("Texto de verifiacion de errores").locatedBy("//div[@class='b661b52535']");
 }
 

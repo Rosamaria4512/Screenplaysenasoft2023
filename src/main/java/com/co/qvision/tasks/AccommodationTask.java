@@ -15,14 +15,13 @@ public class AccommodationTask implements Task {
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(Scroll.to(AccommodationPage.CARD_PRODUCT_1));
-        actor.attemptsTo(Scroll.to(AccommodationPage.TXT_1),Scroll.to(AccommodationPage.TXT_2));
-
         try {
-            Thread.sleep(900000);
+            Thread.sleep(999000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        actor.attemptsTo(Click.on(AccommodationPage.DIV_FILTER));
+        actor.attemptsTo(Scroll.to(AccommodationPage.TXT_1),Scroll.to(AccommodationPage.TXT_2));
+
         actor.attemptsTo(Click.on(AccommodationPage.OP_FILTER));
         try {
             Thread.sleep(3000);

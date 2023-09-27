@@ -26,11 +26,6 @@ public class SearchAccommodationTasks implements Task {
         actor.attemptsTo(Click.on(AccommodationPage.TXT_CHECK_OUT));
         actor.attemptsTo(Click.on(AccommodationPage.SPAN_DATE));
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
         actor.attemptsTo(Click.on(AccommodationPage.BTN_PERSONS));
         actor.attemptsTo(Click.on(AccommodationPage.SPAN_ADULTS));
         actor.attemptsTo(Click.on(AccommodationPage.SPAN_CHILDREN));
@@ -51,12 +46,8 @@ public class SearchAccommodationTasks implements Task {
         }
         actor.attemptsTo(Click.on(AccommodationPage.SPAN_ROMS));
         actor.attemptsTo(Click.on(AccommodationPage.BTN_DONE));
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
         actor.attemptsTo(Click.on(AccommodationPage.BTN_SEARCH));
+
     }
     public static SearchAccommodationTasks searchAccommodationTasks(){
         return Tasks.instrumented(SearchAccommodationTasks.class);

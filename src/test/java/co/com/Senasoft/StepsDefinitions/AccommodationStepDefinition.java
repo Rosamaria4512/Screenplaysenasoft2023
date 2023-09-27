@@ -56,9 +56,8 @@ public class AccommodationStepDefinition {
         OnStage.theActorInTheSpotlight().attemptsTo(AccommodationFailedTask.accommodationFailedTask());
     }
 
-
-    @Then("^el vera un mensaje de campo incompleto$")
-    public void elVeraUnMensajeDeCampoIncompleto() {
+    @Then("^he will see an incomplete field message$")
+    public void heWillSeeAnIncompleteFieldMessage() {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerifyBookFailed.verifyBookFailed(), Matchers.equalTo(Boolean.TRUE)));
 
     }

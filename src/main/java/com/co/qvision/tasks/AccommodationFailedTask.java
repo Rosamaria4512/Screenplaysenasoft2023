@@ -15,7 +15,6 @@ public class AccommodationFailedTask implements Task {
 
         actor.attemptsTo(Click.on(AccommodationPage.BTN_IGNORE));
 
-
         actor.attemptsTo(Click.on(AccommodationPage.BTN_PERSONS));
         actor.attemptsTo(Click.on(AccommodationPage.SPAN_ADULTS));
         actor.attemptsTo(Click.on(AccommodationPage.SPAN_CHILDREN));
