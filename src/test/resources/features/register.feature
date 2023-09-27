@@ -12,4 +12,12 @@ Feature:Register
 
     Examples:
       | email         | password    | confirmation_password |
-      | milton@gmail.com | Rosita4512* | Rosita4512*           |
+      | lenovo.esucre@gamil.com| Rosita4512* | Rosita4512*  |
+
+
+    @incorrectregistration
+    Scenario: incorrect registratio
+      When he enters incorrect data
+        | email         | password    | confirmation_password |
+        | lenovo.esucregamil.com| Rosita4512* | Rosita4512*  |
+      Then he cannot make a successful registration.

@@ -1,9 +1,16 @@
 package co.com.Senasoft.StepsDefinitions;
 
+import com.co.qvision.models.CredentialLoginCorrectly;
 import com.co.qvision.models.DataRegister;
+<<<<<<< HEAD
 import com.co.qvision.questions.VerifyBookFailed;
 import com.co.qvision.questions.VerifyRegisterCorrect;
 import com.co.qvision.tasks.AccommodationFailedTask;
+=======
+import com.co.qvision.models.DataRegisterIncorrectly;
+import com.co.qvision.questions.VerifyRegisterCorrect;
+import com.co.qvision.tasks.RegisterIncorrectlyTask;
+>>>>>>> 600aa08eb140782e3111e1898d0cefc36b80f9ca
 import com.co.qvision.tasks.RegisterTask;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -22,8 +29,12 @@ import java.util.List;
 
 public class RegisterStepDefinition {
 
+
+    //@MANAGED es la que nos permite trabajar con el navegador, abrir el navegador
     @Managed
     WebDriver hisBowser;
+
+    //@before es lo que se genera antes de todos los pasos.
 
     @Before
     public void setUp() {
@@ -51,9 +62,34 @@ public class RegisterStepDefinition {
     @Then("^he makes a successful record\\.$")
     public void heMakesASuccessfulRecord() {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerifyRegisterCorrect.validationregister()
+<<<<<<< HEAD
                 , Matchers.equalTo(Boolean.TRUE)));
 
     }
 
 
 }
+=======
+        , Matchers.equalTo(Boolean.FALSE)));
+
+        System.out.println("Hubo un Registro exitoso con validacion correcta");
+
+    }
+
+    @When("^he enters incorrect data$")
+    public void heEntersIncorrectData(List<DataRegisterIncorrectly> dataRegisterIncorrectlyList) {
+        DataRegisterIncorrectly dataRegisterIncorrectly;
+        dataRegisterIncorrectly=dataRegisterIncorrectlyList.get(0);
+        OnStage.theActorInTheSpotlight().attemptsTo(RegisterIncorrectlyTask.registerincorrectly(dataRegisterIncorrectly));
+    }
+
+
+    @Then("^he cannot make a successful registration\\.$")
+    public void heCannotMakeASuccessfulRegistration() {
+
+    }
+
+
+
+}
+>>>>>>> 600aa08eb140782e3111e1898d0cefc36b80f9ca
