@@ -1,12 +1,12 @@
 package co.com.Senasoft.StepsDefinitions;
 
-import com.co.qvision.models.CredentialLoginCorrectly;
 import com.co.qvision.models.DataRegister;
 import com.co.qvision.questions.VerifyBookFailed;
 import com.co.qvision.questions.VerifyRegisterCorrect;
 import com.co.qvision.tasks.AccommodationFailedTask;
 
 import com.co.qvision.models.DataRegisterIncorrectly;
+import com.co.qvision.questions.VerifyIncorrectly;
 import com.co.qvision.questions.VerifyRegisterCorrect;
 import com.co.qvision.tasks.RegisterIncorrectlyTask;
 
@@ -54,8 +54,6 @@ public class RegisterStepDefinition {
         DataRegister dataRegister;
         dataRegister = dataRegisterList.get(0);
         OnStage.theActorInTheSpotlight().attemptsTo(RegisterTask.register(dataRegister));
-
-
     }
 
     @Then("^he makes a successful record\\.$")
@@ -76,10 +74,16 @@ public class RegisterStepDefinition {
 
     @Then("^he cannot make a successful registration\\.$")
     public void heCannotMakeASuccessfulRegistration() {
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerifyIncorrectly.validationregisterIncorrectly()
+            , Matchers.equalTo(Boolean.FALSE)));
 
+        System.out.println("Hubo un Registro Incorrecto con validacion correcta");
     }
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 3e56b515daae379a367802f829950a206aebacdf
 }
 
 
