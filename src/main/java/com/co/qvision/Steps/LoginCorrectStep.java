@@ -1,14 +1,14 @@
 package com.co.qvision.Steps;
 
 import com.co.qvision.PageObejcts.LoginPage;
-import com.co.qvision.models.CredentialLoginCorrectly;
+import com.co.qvision.models.DataWrongLogin;
 import net.thucydides.core.annotations.Step;
 
 public class LoginCorrectStep {
 
-    CredentialLoginCorrectly credentialLoginCorrectly;
+    DataWrongLogin credentialLoginCorrectly;
 
-    public LoginCorrectStep(CredentialLoginCorrectly credentialLoginCorrectly) {
+    public LoginCorrectStep(DataWrongLogin credentialLoginCorrectly) {
         this.credentialLoginCorrectly = credentialLoginCorrectly;
     }
 

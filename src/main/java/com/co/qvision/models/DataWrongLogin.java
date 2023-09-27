@@ -1,10 +1,10 @@
 package com.co.qvision.models;
 
-public class CredentialLoginCorrectly {
+public class DataWrongLogin {
     private String email;
     private String password;
 
-    public CredentialLoginCorrectly(String email, String password) {
+    public DataWrongLogin(String email, String password) {
         this.email = email;
         this.password = password;
     }
@@ -24,4 +24,7 @@ public class CredentialLoginCorrectly {
     public void setPassword(String password) {
         this.password = password;
     }
+
+
+
 }
