@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/accommodation.feature",
         glue = "co.com.Senasoft.StepsDefinitions",
-        snippets = SnippetType.CAMELCASE
+        snippets = SnippetType.CAMELCASE,
+        tags = "@ReservationbyFiltres"
 )
 public class AccommodationRunner {
 }
