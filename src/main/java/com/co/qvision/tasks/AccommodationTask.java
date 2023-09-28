@@ -33,33 +33,11 @@ public class AccommodationTask implements Task {
 
 
         actor.attemptsTo(Click.on(SearchForTypePage.SLT_OPTION_HOTEL));
-        try {Thread.sleep(2000);} catch (InterruptedException e) {throw new RuntimeException(e);}
-
-
-        actor.attemptsTo(Click.on(SearchForTypePage.A_SEE_HOTEL));
-        try {Thread.sleep(2000);} catch (InterruptedException e) {throw new RuntimeException(e);}
-
-
-
-        actor.attemptsTo(Click.on(SearchForTypePage.BTN_RESERVE));
-
+        try {Thread.sleep(1000);} catch (InterruptedException e) {throw new RuntimeException(e);}
 
         actor.attemptsTo(Click.on(SearchForTypePage.A_SEE_HOTEL));
-/*
-        actor.attemptsTo(Click.on(AccommodationPage.A_SEE_HOTEL));
->>>>>>> faf9e9c99e2a5385957e6bfb95539025dd1f4eb7
-        try {Thread.sleep(15000);} catch (InterruptedException e) {throw new RuntimeException(e);}
-
-
-
-       // actor.attemptsTo(Click.on(AccommodationPage.A_SEE_HOTEL));
-      //  try {Thread.sleep(15000);} catch (InterruptedException e) {throw new RuntimeException(e);}
-
-*/
-
-        actor.attemptsTo(Click.on(AccommodationPage.BTN_RESERV));
-
         try {Thread.sleep(2000);} catch (InterruptedException e) {throw new RuntimeException(e);}
+
 
     }
     public static AccommodationTask accommodationTask(){

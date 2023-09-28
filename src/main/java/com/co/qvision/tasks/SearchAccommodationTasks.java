@@ -28,8 +28,8 @@ public class SearchAccommodationTasks implements Task {
 
         //Este metodo se usa para controlar el tiempo entre cada  paso se realise para que la automatizacion se un poco mas pausada
 
-        actor.attemptsTo(Enter.keyValues("Cali").into(AccommodationPage.TXT_PLACE));
         actor.attemptsTo(Enter.keyValues(dataAccommodation.getCity()).into(AccommodationPage.TXT_PLACE));
+
         actor.attemptsTo(Click.on(AccommodationPage.SPAN_DATE));
         actor.attemptsTo(Click.on(AccommodationPage.TXT_CHECK_IN));
         actor.attemptsTo(Click.on(AccommodationPage.TXT_CHECK_OUT));
@@ -37,15 +37,24 @@ public class SearchAccommodationTasks implements Task {
 
         actor.attemptsTo(Click.on(AccommodationPage.BTN_PERSONS));
         actor.attemptsTo(Click.on(AccommodationPage.SPAN_ADULTS));
-        actor.attemptsTo(Click.on(AccommodationPage.SPAN_CHILDREN));
-        actor.attemptsTo(Click.on(AccommodationPage.SLT_EDAD_1));
-        actor.attemptsTo(Click.on(AccommodationPage.OPT_EDAD_1));
-        actor.attemptsTo(Click.on(AccommodationPage.BTN_PERSONS));
 
-        actor.attemptsTo(Click.on(AccommodationPage.SLT_EDAD_1));
-        actor.attemptsTo(Click.on(AccommodationPage.OPT_EDAD_1));
+        actor.attemptsTo(Click.on(AccommodationPage.SPAN_CHILDREN));
+        actor.attemptsTo(Click.on(AccommodationPage.SPAN_CHILDREN));
+
 
         actor.attemptsTo(Click.on(AccommodationPage.SPAN_ROMS));
+
+        actor.attemptsTo(Click.on(AccommodationPage.SLT_EDAD_1));
+        actor.attemptsTo(Click.on(AccommodationPage.OPT_EDAD_1));
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        actor.attemptsTo(Click.on(AccommodationPage.SLT_EDAD_2));
+        actor.attemptsTo(Click.on(AccommodationPage.OPT_EDAD_2));
+
         actor.attemptsTo(Click.on(AccommodationPage.BTN_DONE));
         actor.attemptsTo(Click.on(AccommodationPage.BTN_SEARCH));
         try {
@@ -58,7 +67,7 @@ public class SearchAccommodationTasks implements Task {
 
 
     }
-    public static SearchAccommodationTasks searchAccommodationTasks(){
-        return Tasks.instrumented(SearchAccommodationTasks.class);
+    public static SearchAccommodationTasks searchAccommodationTasks(DataAccommodation dataAccommodation ){
+        return Tasks.instrumented(SearchAccommodationTasks.class,dataAccommodation);
     }
 }

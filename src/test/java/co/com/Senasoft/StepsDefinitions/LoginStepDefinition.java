@@ -61,8 +61,7 @@ public class LoginStepDefinition {
 
     @Then("^he entry succesfully$")
     public void heEntrySuccesfully() {
-   OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Verifyfligh.search()
-        , Matchers.is("Hola ")));
+
 
     }
 

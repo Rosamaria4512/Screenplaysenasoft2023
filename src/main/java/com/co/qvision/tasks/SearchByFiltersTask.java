@@ -26,6 +26,14 @@ public class SearchByFiltersTask implements Task {
         actor.attemptsTo(Click.on(AccommodationForFiltres.SLT_FILTER_3));
         try {Thread.sleep(3000);} catch (InterruptedException e) {throw new RuntimeException(e);}
 
+        actor.attemptsTo(Click.on(AccommodationForFiltres.SEE_PRODUCT));
+        try {Thread.sleep(3000);} catch (InterruptedException e) {throw new RuntimeException(e);}
+
+        actor.attemptsTo(Scroll.to(AccommodationForFiltres.SEE_PRODUCT));
+        try {Thread.sleep(3000);} catch (InterruptedException e) {throw new RuntimeException(e);}
+
+
+
     }
     public static SearchByFiltersTask searchByFiltersTask(){
         return Tasks.instrumented(SearchByFiltersTask.class);

@@ -1,8 +1,10 @@
 package co.com.Senasoft.StepsDefinitions;
 
 import com.co.qvision.models.CredentialLoginCorrectly;
+import com.co.qvision.models.DataAccommodation;
 import com.co.qvision.questions.VerifyBookFailed;
 import com.co.qvision.questions.VerifyElementsSaves;
+import com.co.qvision.questions.VerifyResultFilter;
 import com.co.qvision.tasks.*;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.*;
@@ -42,9 +44,12 @@ public class AccommodationStepDefinition {
     }
 
     @When("^he clicks on the Accommodations option$")
-    public void heClicksOnTheAccommodationsOption() {
+    public void heClicksOnTheAccommodationsOption(List<DataAccommodation>dataAccommodationList) {
+        DataAccommodation dataAccommodation;
+        dataAccommodation=dataAccommodationList.get(1);
+
         OnStage.theActorInTheSpotlight().attemptsTo(CloseMessage.closeMessage());
-        OnStage.theActorInTheSpotlight().attemptsTo(SearchAccommodationTasks.searchAccommodationTasks());
+        OnStage.theActorInTheSpotlight().attemptsTo(SearchAccommodationTasks.searchAccommodationTasks(dataAccommodation));
 
 
         // creamos una variable que nos permita alaamcenar la url de una pestaña y la podamos imprimir en consola
@@ -88,9 +93,12 @@ public class AccommodationStepDefinition {
 
     //----------------------------------------------------------------------------------------------------------------------------------------------
     @When("^the is in the Results module and select several filters$")
-    public void theIsInTheResultsModuleAndSelectSeveralFilters() {
+    public void theIsInTheResultsModuleAndSelectSeveralFilters(List<DataAccommodation>dataAccommodationList) {
+        DataAccommodation dataAccommodation;
+        dataAccommodation=dataAccommodationList.get(0);
+
         OnStage.theActorInTheSpotlight().attemptsTo(CloseMessage.closeMessage());
-        OnStage.theActorInTheSpotlight().attemptsTo(SearchAccommodationTasks.searchAccommodationTasks());
+        OnStage.theActorInTheSpotlight().attemptsTo(SearchAccommodationTasks.searchAccommodationTasks(dataAccommodation));
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -105,7 +113,7 @@ public class AccommodationStepDefinition {
 
     @Then("^He will see the new results obtained by applying the filters$")
     public void heWillSeeTheNewResultsObtainedByApplyingTheFilters() {
-        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerifyElementsSaves.verifyElementsSaves(),Matchers.equalTo(Boolean.TRUE)));
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerifyResultFilter.verifyResultFilter(),Matchers.equalTo(Boolean.TRUE)));
 
     }
 }
