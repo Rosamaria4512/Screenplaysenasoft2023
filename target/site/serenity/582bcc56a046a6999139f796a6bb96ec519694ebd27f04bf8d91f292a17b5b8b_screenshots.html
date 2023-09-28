@@ -132,7 +132,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 28-09-2023 09:32</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 28-09-2023 09:35</span>
     <br style="clear:left"/>
 </div>
 
@@ -173,9 +173,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
                             <span class="test-case-title">
-                                <span class="error-color">
+                                <span class="failing-color">
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -198,7 +198,7 @@
         <div class="table">
             <div class="row">
                 <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">Element click intercepted exception: element click intercepted: Element (button aria-label=' ...' aria-current='page' type='button' class='Actionable-module__root___o3y3+ Pagination-module__link___Oi-ZE')1(/button) is not clickable at point (727, 285). Other element would receive the click: (div data-testid='timeline_leg_0' class='css-vvcyi3')...(/div)</span>
+                    <span class="error-message error-message-title">Element should be enabled exception: Expected enabled element was not enabled</span>
                 </div>
                 <div class="col-sm-2">
                     <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
@@ -214,13 +214,20 @@
         <div class="collapse multi-collapse" id="stacktraceModal-overall">
             <div class="card">
                 <div class="card-header">
-                    <h4>org.openqa.selenium.ElementClickInterceptedException </h4>
+                    <h4>net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException </h4>
                 </div>
                 <div class="card-body">
                     <div>
-                        <pre>com.co.qvision.tasks.FlighTask.performAs(FlighTask.java:35)<br />co.com.Senasoft.StepsDefinitions.FlightStepDefinition.theUserSelectsAStopoverInTheFlightsModuleAndMakesTheReservation(FlightStepDefinition.java:20)<br />cucumber.runner.Runner.runPickle(Runner.java:80)<br /></pre>
+                        <pre>com.co.qvision.tasks.FlighTask.performAs(FlighTask.java:33)<br />co.com.Senasoft.StepsDefinitions.FlightStepDefinition.theUserSelectsAStopoverInTheFlightsModuleAndMakesTheReservation(FlightStepDefinition.java:20)<br />cucumber.runner.Runner.runPickle(Runner.java:80)<br /></pre>
                     </div>
 
+                    <h4>
+                        Caused by: org.openqa.selenium.TimeoutException
+                    </h4>
+                    <div>
+                            <pre>Expected condition failed: waiting for By.xpath: //button[@data-testid='flight_card_bound_select_flight'] to be enabled (tried for 5 second(s) with 100 milliseconds interval)</pre>
+                        <pre>com.co.qvision.tasks.FlighTask.performAs(FlighTask.java :33)<br />co.com.Senasoft.StepsDefinitions.FlightStepDefinition.theUserSelectsAStopoverInTheFlightsModuleAndMakesTheReservation(FlightStepDefinition.java :20)<br />cucumber.runner.Runner.runPickle(Runner.java :80)<br /></pre>
+                    </div>
                 </div>
             </div>
         </div>
@@ -228,27 +235,26 @@
 
 
                 <div class="panel-body">
-                    <a href="pagesource3386218477418959665.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                    <a href="pagesource2357064026673652283.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
                 </div>
             </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="7aa91fd641d631b4c57358b8350e1d65966c003bc036d425ed3bea4298602b25.png" title=" Given he user enters the website" width="1920"/>
-                <img src="7aa91fd641d631b4c57358b8350e1d65966c003bc036d425ed3bea4298602b25.png" title=" User opens the https://www.booking.com/index.es.html?label=es-co-booking-desktop-QLGRvVsXz2aps*_lUmd*1gS652804041077%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-102518000%3Alp1003665%3Ali%3Adec%3Adm&amp;gclid=CjwKCAjwgsqoBhBNEiwAwe5w077TiV0TUdUzYfYh1-6VJKeaKbN97OQud8lSIPgn5wWrkdyjhOGSYRoCtLEQAvD_BwE&amp;aid=2336990&amp;sid=91faa5accfec39eacfbf6ac0adf3e1d7" width="1920"/>
-                <img src="7aa91fd641d631b4c57358b8350e1d65966c003bc036d425ed3bea4298602b25.png" title=" Given he user enters the website (completed)" width="1920"/>
-                <img src="7aa91fd641d631b4c57358b8350e1d65966c003bc036d425ed3bea4298602b25.png" title=" When the user selects a stopover in the &ldquo;Flights&rdquo; module and makes the reservation
+                <img src="cf14d341b9240b0a6798570e1651a49b950e7b130dee7f7b67d37a5cdc44365d.png" title=" Given he user enters the website" width="1920"/>
+                <img src="cf14d341b9240b0a6798570e1651a49b950e7b130dee7f7b67d37a5cdc44365d.png" title=" User opens the https://www.booking.com/index.es.html?label=es-co-booking-desktop-QLGRvVsXz2aps*_lUmd*1gS652804041077%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-102518000%3Alp1003665%3Ali%3Adec%3Adm&amp;gclid=CjwKCAjwgsqoBhBNEiwAwe5w077TiV0TUdUzYfYh1-6VJKeaKbN97OQud8lSIPgn5wWrkdyjhOGSYRoCtLEQAvD_BwE&amp;aid=2336990&amp;sid=91faa5accfec39eacfbf6ac0adf3e1d7" width="1920"/>
+                <img src="cf14d341b9240b0a6798570e1651a49b950e7b130dee7f7b67d37a5cdc44365d.png" title=" Given he user enters the website (completed)" width="1920"/>
+                <img src="cf14d341b9240b0a6798570e1651a49b950e7b130dee7f7b67d37a5cdc44365d.png" title=" When the user selects a stopover in the &ldquo;Flights&rdquo; module and makes the reservation
 | email | phone | name | lastname | dayT | year | nametarget | nambertarget | day | cvc |
 | lenovo.esucre@gmail.com | 3164706984 | rosa | ledezma | 27 | 1995 | rosamaria | 4666533000000031 | 12/24 | 123 |" width="1920"/>
-                <img src="7aa91fd641d631b4c57358b8350e1d65966c003bc036d425ed3bea4298602b25.png" title=" User fligh task" width="1920"/>
-                <img src="9628d3ddd9fb5a686f4797df4bcb3c50725d186887ecf8dbc7926e99aca29569.png" title=" User clicks on CLICK EN EL BOTON" width="1920"/>
-                <img src="9628d3ddd9fb5a686f4797df4bcb3c50725d186887ecf8dbc7926e99aca29569.png" title=" User clicks on CLICK EN EL VUELOS" width="1920"/>
-                <img src="295eb3ea71b2dc06dd66c629da74222fedbe0499acb15aa866be3af73b2d8d44.png" title=" User clicks on CLICK EN EL VUELOS (completed)" width="1920"/>
-                <img src="295eb3ea71b2dc06dd66c629da74222fedbe0499acb15aa866be3af73b2d8d44.png" title=" User clicks on CLICK EN UNA IMAGEN" width="1920"/>
-                <img src="296d7339411e04cdd3c4a24eafeeeedf3d4c212f46c910aa806321eef32c751b.png" title=" User clicks on CLICK EN UNA IMAGEN (completed)" width="1920"/>
-                <img src="296d7339411e04cdd3c4a24eafeeeedf3d4c212f46c910aa806321eef32c751b.png" title=" User clicks on CLICK EN VER VUELOS" width="1920"/>
-                <img src="1afc6d1ec1630d39c36b2c7c1bdb4f41879834b6238ca70113af0a01c5720372.png" title=" User clicks on CLICK EN VER VUELOS (completed)" width="1920"/>
-                <img src="065d48f0ba808520b027171bac952c6fd8128234f6f38bdc976667f24db16fcd.png" title=" User clicks on CLICK EN SIGUIENTE" width="1920"/>
-                <img src="065d48f0ba808520b027171bac952c6fd8128234f6f38bdc976667f24db16fcd.png" title=" User clicks on CLICK EN SIGUIENTE (completed): <span class='error-color'>ERROR</span>" width="1920"/>
+                <img src="659f95c1a62f22165931ba0e5704b831c538d7fcf7e69e17cff8a4bab410c079.png" title=" User fligh task" width="1920"/>
+                <img src="659f95c1a62f22165931ba0e5704b831c538d7fcf7e69e17cff8a4bab410c079.png" title=" User clicks on CLICK EN EL BOTON" width="1920"/>
+                <img src="54e4dd75035000cab97eb95feab90186c7d5661242b5f7e6b9014f71c1eda787.png" title=" User clicks on CLICK EN EL BOTON (completed)" width="1920"/>
+                <img src="54e4dd75035000cab97eb95feab90186c7d5661242b5f7e6b9014f71c1eda787.png" title=" User clicks on CLICK EN EL VUELOS" width="1920"/>
+                <img src="6259e0aa7f0ea5a95b1580a75c4ff66ebd749c2609b372b36e797815b42dbedb.png" title=" User clicks on CLICK EN EL VUELOS (completed)" width="1920"/>
+                <img src="6259e0aa7f0ea5a95b1580a75c4ff66ebd749c2609b372b36e797815b42dbedb.png" title=" User clicks on CLICK EN UNA IMAGEN" width="1920"/>
+                <img src="a345062b6e2eb7455306374d26918ab03cc3a729cffa5d76d4dfa29ae833e156.png" title=" User clicks on CLICK EN UNA IMAGEN (completed)" width="1920"/>
+                <img src="a345062b6e2eb7455306374d26918ab03cc3a729cffa5d76d4dfa29ae833e156.png" title=" User clicks on CLICK EN VER VUELOS" width="1920"/>
+                <img src="5379f2646162f82f4ebf38806ca5e4af79e6c5b646f882f03d13811c68db620c.png" title=" User clicks on CLICK EN VER VUELOS (completed): <span class='failing-color'>FAILURE</span>" width="1920"/>
             </div>
         </div>
 
