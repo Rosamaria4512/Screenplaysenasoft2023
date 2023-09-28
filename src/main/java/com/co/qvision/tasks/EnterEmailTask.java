@@ -26,8 +26,9 @@ public class EnterEmailTask implements Task {
         }
         actor.attemptsTo(Enter.theValue(credentialLoginCorrectly.getPassword()).into(OpenLoginPage.TXT_PASS));
         actor.attemptsTo(Click.on(OpenLoginPage.BTN_ENTER));
+
         try {
-            Thread.sleep(99900);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

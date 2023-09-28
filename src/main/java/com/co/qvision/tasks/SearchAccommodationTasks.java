@@ -1,5 +1,6 @@
 package com.co.qvision.tasks;
 
+import com.co.qvision.models.DataAccommodation;
 import com.co.qvision.userinterfaces.AccommodationPage;
 import com.co.qvision.userinterfaces.SearchForTypePage;
 import net.serenitybdd.screenplay.Actor;
@@ -12,16 +13,31 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SearchAccommodationTasks implements Task {
+<<<<<<< HEAD
+=======
+    DataAccommodation dataAccommodation;
+
+    public SearchAccommodationTasks(DataAccommodation dataAccommodation) {
+        this.dataAccommodation = dataAccommodation;
+    }
+>>>>>>> ee048b25efc47aa3d1f2eccedd5e159b15e627eb
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+
+
+
 
         //Aqui comenzamos a usar los elementos que logramos localizar en el Archivo de Accommodation
         //Les asignamos una accion, como de recibir texto o u vlick
 
         //Este metodo se usa para controlar el tiempo entre cada  paso se realise para que la automatizacion se un poco mas pausada
 
+<<<<<<< HEAD
         actor.attemptsTo(Enter.keyValues("Cali").into(AccommodationPage.TXT_PLACE));
+=======
+        actor.attemptsTo(Enter.keyValues(dataAccommodation.getCity()).into(AccommodationPage.TXT_PLACE));
+>>>>>>> ee048b25efc47aa3d1f2eccedd5e159b15e627eb
         actor.attemptsTo(Click.on(AccommodationPage.SPAN_DATE));
         actor.attemptsTo(Click.on(AccommodationPage.TXT_CHECK_IN));
         actor.attemptsTo(Click.on(AccommodationPage.TXT_CHECK_OUT));

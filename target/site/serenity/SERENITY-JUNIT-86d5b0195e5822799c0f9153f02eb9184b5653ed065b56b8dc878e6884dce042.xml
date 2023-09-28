@@ -1,7 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Favorites snd saved" skipped="0" tests="1" time="128.54" timestamp="2023-09-27 07:43:54"><testcase name="Add Items"><failure message="Expected enabled element was not enabled" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled</failure><system-err>Expected enabled element was not enabled&#13;
-com.co.qvision.tasks.OpenModuleSaveTask.performAs(OpenModuleSaveTask.java:13)&#13;
-co.com.Senasoft.StepsDefinitions.YourCountStepDefinition.theUserSelectsItemsForFavorites(YourCountStepDefinition.java:24)&#13;
-cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
-worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
-worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Favorites snd saved" skipped="0" tests="1" time="38.12" timestamp="2023-09-28 12:46:14"><testcase name="Add Items"/></testsuite>
