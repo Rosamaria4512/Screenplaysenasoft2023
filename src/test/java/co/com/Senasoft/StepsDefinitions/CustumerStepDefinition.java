@@ -1,7 +1,7 @@
 package co.com.Senasoft.StepsDefinitions;
 
 import com.co.qvision.models.TextMessage;
-import com.co.qvision.questions.VerifyMessaggeSend;
+import com.co.qvision.questions.VerifyModuleCustumer;
 import com.co.qvision.tasks.CloseMessage;
 import com.co.qvision.tasks.CustomerSendTasks;
 import cucumber.api.java.en.Then;
@@ -24,7 +24,7 @@ public class CustumerStepDefinition {
 
     @Then("^the user will have submitted a rating of the website$")
     public void theUserWillHaveSubmittedARatingOfTheWebsite() {
-    OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerifyMessaggeSend.verifyMessaggeSend(), Matchers.equalTo(Boolean.TRUE)));
+    OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerifyModuleCustumer.verifyMessaggeSend(), Matchers.equalTo(Boolean.TRUE)));
 
     }
 

@@ -1,0 +1,9 @@
+
+b	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(éŠëë8ÿ·ĞÙ­1
+b	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(éŠëë8¸ĞÙ­1
+{
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(éŠëë8“¸ĞÙ­1
+{
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(éŠëë8˜¸ĞÙ­1
+n
+java:S1128"LRemove this unused import 'com.co.qvision.userinterfaces.AccommodationPage'.(ğ®Åºÿÿÿÿÿ8š¸ĞÙ­1

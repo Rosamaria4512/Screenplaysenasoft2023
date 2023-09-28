@@ -7,11 +7,12 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/Customer.feature",
+        features = "src/test/resources/features/customer.feature",
         snippets = SnippetType.CAMELCASE,
         glue = "co.com.Senasoft.StepsDefinitions",
         strict = false,
-        plugin = "pretty"
+        plugin = "pretty",
+        tags = "@SendMessage"
 
 )
 public class CustomerRunner {
