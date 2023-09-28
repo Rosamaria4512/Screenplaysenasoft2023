@@ -132,7 +132,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 27-09-2023 12:38</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 28-09-2023 04:45</span>
     <br style="clear:left"/>
 </div>
 
@@ -159,6 +159,12 @@
 
                         </td>
                         <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="335502e9f6daa1d4c014920b0950ddeff7e9252023df976e4c210f1def38c80d.html">Incompletereservation
+                                    (tag)</a>
+                                </span>
+                            </p>
                         </td>
                     </tr>
                 </table>
@@ -167,9 +173,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">Book a failed accommodation
+                                <span class="failing-color">Book a failed accommodation
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -186,36 +192,62 @@
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Element should be enabled exception: Expected enabled element was not enabled</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.co.qvision.tasks.AccommodationFailedTask.performAs(AccommodationFailedTask.java:18)<br />co.com.Senasoft.StepsDefinitions.AccommodationStepDefinition.heClicksOnTheOptionAndWritesTheIncompleteSpecifications(AccommodationStepDefinition.java:79)<br />cucumber.runner.Runner.runPickle(Runner.java:80)<br /></pre>
+                    </div>
+
+                    <h4>
+                        Caused by: org.openqa.selenium.TimeoutException
+                    </h4>
+                    <div>
+                            <pre>Expected condition failed: waiting for By.xpath: //button[@class='d47738b911 b7d08821c3'] to be enabled (tried for 5 second(s) with 100 milliseconds interval)</pre>
+                        <pre>com.co.qvision.tasks.AccommodationFailedTask.performAs(AccommodationFailedTask.java :18)<br />co.com.Senasoft.StepsDefinitions.AccommodationStepDefinition.heClicksOnTheOptionAndWritesTheIncompleteSpecifications(AccommodationStepDefinition.java :79)<br />cucumber.runner.Runner.runPickle(Runner.java :80)<br /></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource5204324654958470126.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="96101ba5e467d91d6b8e57eff39a8f575ed926b1f8ee2d47b9ecd049fc230fff.png" title=" Given the user Enter the website" width="1366"/>
-                <img src="96101ba5e467d91d6b8e57eff39a8f575ed926b1f8ee2d47b9ecd049fc230fff.png" title=" User opens the https://www.booking.com/" width="1366"/>
-                <img src="96101ba5e467d91d6b8e57eff39a8f575ed926b1f8ee2d47b9ecd049fc230fff.png" title=" Given the user Enter the website (completed)" width="1366"/>
-                <img src="dbc64ba6f766ecc51b0e66451af0b9d449783c169e12d7d105b87392bd2add1e.png" title=" When he clicks on the &quot;Accommodations&quot; option and writes the incomplete specifications" width="1366"/>
-                <img src="dbc64ba6f766ecc51b0e66451af0b9d449783c169e12d7d105b87392bd2add1e.png" title=" User accommodation failed task" width="1366"/>
-                <img src="dbc64ba6f766ecc51b0e66451af0b9d449783c169e12d7d105b87392bd2add1e.png" title=" User clicks on Ingnorar mensaje" width="1366"/>
-                <img src="dbc64ba6f766ecc51b0e66451af0b9d449783c169e12d7d105b87392bd2add1e.png" title=" User clicks on Agregar personas" width="1366"/>
-                <img src="0976be2c0159c06b02596d55da098d547ed1613a82a7dfebd40ee96cf7a155c8.png" title=" User clicks on Agregar personas (completed)" width="1366"/>
-                <img src="0976be2c0159c06b02596d55da098d547ed1613a82a7dfebd40ee96cf7a155c8.png" title=" User clicks on Agregar Adultos" width="1366"/>
-                <img src="b56f7cd2a084731b019a59dcfcc85083eb69d4f02667e0354bc13f9a6318e6b1.png" title=" User clicks on Agregar Adultos (completed)" width="1366"/>
-                <img src="b56f7cd2a084731b019a59dcfcc85083eb69d4f02667e0354bc13f9a6318e6b1.png" title=" User clicks on Agregar Ni&ntilde;os" width="1366"/>
-                <img src="bf99a352770cdfb38b751be26a33b443f6d4e46dd4cedfca56c46e328d18db21.png" title=" User clicks on Agregar Ni&ntilde;os (completed)" width="1366"/>
-                <img src="92e28256923060d5d91196f8e7ed9bae4dd988a7be828f4bcc12ab6f5b4b5481.png" title=" User clicks on Agregar Edad de los ni&ntilde;os" width="1366"/>
-                <img src="25b643e1b237606ae0d1d52ba4f4759ea8be871dd992d897d9abe3f84bf7a2ed.png" title=" User clicks on Agregar Edad de los ni&ntilde;os (completed)" width="1366"/>
-                <img src="25b643e1b237606ae0d1d52ba4f4759ea8be871dd992d897d9abe3f84bf7a2ed.png" title=" User clicks on Escojer Edad del ni&ntilde;o 1" width="1366"/>
-                <img src="d8d17d317e54b7438af12e47c713acc624f168a04dc401630e98a9022033eed1.png" title=" User clicks on Escojer Edad del ni&ntilde;o 1 (completed)" width="1366"/>
-                <img src="d8d17d317e54b7438af12e47c713acc624f168a04dc401630e98a9022033eed1.png" title=" User clicks on Escojer Cantidad de habitaciones" width="1366"/>
-                <img src="df4f3452323c3ccaf8c1d738203ce1a1d642fc5b01c6134c8735c9e163e5d509.png" title=" User clicks on Escojer Cantidad de habitaciones (completed)" width="1366"/>
-                <img src="df4f3452323c3ccaf8c1d738203ce1a1d642fc5b01c6134c8735c9e163e5d509.png" title=" User clicks on Boton guardar" width="1366"/>
-                <img src="5a3277e277612766daf701f9704e9264e1c45ea1b2230fe8feb46b6cc7497bfd.png" title=" User clicks on Boton guardar (completed)" width="1366"/>
-                <img src="10c637e71f609077a19762f5a53c916ad4eecef8d22a0ab541e32734b366a37d.png" title=" User clicks on Boton Buscar" width="1366"/>
-                <img src="36a51174bf06653f6b77c0eecb6b71e24ed3bc8b808c5dcc2610eb7fea6da55a.png" title=" User clicks on Boton Buscar (completed)" width="1366"/>
-                <img src="36a51174bf06653f6b77c0eecb6b71e24ed3bc8b808c5dcc2610eb7fea6da55a.png" title=" User accommodation failed task (completed)" width="1366"/>
-                <img src="36a51174bf06653f6b77c0eecb6b71e24ed3bc8b808c5dcc2610eb7fea6da55a.png" title=" When he clicks on the &quot;Accommodations&quot; option and writes the incomplete specifications (completed)" width="1366"/>
-                <img src="e679f541657b456ba34153564f2ffd58625f0fd3600b51d710cc6409b7429fd5.png" title=" Then he will see an incomplete field message" width="1366"/>
-                <img src="e679f541657b456ba34153564f2ffd58625f0fd3600b51d710cc6409b7429fd5.png" title=" Then verify book failed should be (true)" width="1366"/>
-                <img src="e679f541657b456ba34153564f2ffd58625f0fd3600b51d710cc6409b7429fd5.png" title=" Then verify book failed should be (true) (completed)" width="1366"/>
-                <img src="e679f541657b456ba34153564f2ffd58625f0fd3600b51d710cc6409b7429fd5.png" title=" Then he will see an incomplete field message (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+                <img src="3cf61641d4ca1c25c025a8fab857167024c03878eff92adfc32562979401f3d2.png" title=" Given the user Enter the website" width="1920"/>
+                <img src="3cf61641d4ca1c25c025a8fab857167024c03878eff92adfc32562979401f3d2.png" title=" User opens the https://www.booking.com/" width="1920"/>
+                <img src="3cf61641d4ca1c25c025a8fab857167024c03878eff92adfc32562979401f3d2.png" title=" Given the user Enter the website (completed)" width="1920"/>
+                <img src="3cf61641d4ca1c25c025a8fab857167024c03878eff92adfc32562979401f3d2.png" title=" When he clicks on the &quot;Accommodations&quot; option and writes the incomplete specifications" width="1920"/>
+                <img src="3cf61641d4ca1c25c025a8fab857167024c03878eff92adfc32562979401f3d2.png" title=" User accommodation failed task" width="1920"/>
+                <img src="1e5b092a478194aff8df115690e7580945a7903cd153e7433e7c5bfc420f40c6.png" title=" User clicks on Ignorar mensaje" width="1920"/>
+                <img src="1e5b092a478194aff8df115690e7580945a7903cd153e7433e7c5bfc420f40c6.png" title=" User clicks on Agregar personas" width="1920"/>
+                <img src="1b508c0b640241b6a3c272787bfd3aeb694196182fc9c8e499db926bfb5ce112.png" title=" User clicks on Agregar personas (completed): <span class='failing-color'>FAILURE</span>" width="1920"/>
             </div>
         </div>
 

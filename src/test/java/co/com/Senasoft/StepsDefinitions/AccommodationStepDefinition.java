@@ -52,7 +52,7 @@ public class AccommodationStepDefinition {
         handle = webDriver.getWindowHandle();
 
         System.out.println(handle);
-       // webDriver.switchTo().window(handle);
+        // webDriver.switchTo().window(handle);
 
         OnStage.theActorInTheSpotlight().attemptsTo(AccommodationTask.accommodationTask());
 

@@ -37,27 +37,21 @@ public class AccommodationTask implements Task {
         actor.attemptsTo(Click.on(SearchForTypePage.SLT_OPTION_HOTEL));
         try {Thread.sleep(2000);} catch (InterruptedException e) {throw new RuntimeException(e);}
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> ee048b25efc47aa3d1f2eccedd5e159b15e627eb
         actor.attemptsTo(Click.on(SearchForTypePage.A_SEE_HOTEL));
         try {Thread.sleep(2000);} catch (InterruptedException e) {throw new RuntimeException(e);}
 
 
 
         actor.attemptsTo(Click.on(SearchForTypePage.BTN_RESERVE));
-<<<<<<< HEAD
+
 /*
         actor.attemptsTo(Click.on(AccommodationPage.A_SEE_HOTEL));
         try {Thread.sleep(15000);} catch (InterruptedException e) {throw new RuntimeException(e);}
-=======
+
 
 
        // actor.attemptsTo(Click.on(AccommodationPage.A_SEE_HOTEL));
       //  try {Thread.sleep(15000);} catch (InterruptedException e) {throw new RuntimeException(e);}
->>>>>>> ee048b25efc47aa3d1f2eccedd5e159b15e627eb
 
 */
 

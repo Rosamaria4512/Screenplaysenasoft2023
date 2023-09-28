@@ -132,7 +132,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 27-09-2023 16:43</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 28-09-2023 04:53</span>
     <br style="clear:left"/>
 </div>
 
@@ -173,9 +173,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">
+                                <span class="failing-color">
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -196,47 +196,76 @@
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Element should be enabled exception: Expected enabled element was not enabled</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.co.qvision.tasks.CarRentalTask.performAs(CarRentalTask.java:29)<br />co.com.Senasoft.StepsDefinitions.CarRentalStepDefinition.youClickOnCarRentalAndInTheSearchSessionFillOutTheRequiredData(CarRentalStepDefinition.java:27)<br />cucumber.runner.Runner.runPickle(Runner.java:80)<br /></pre>
+                    </div>
+
+                    <h4>
+                        Caused by: org.openqa.selenium.TimeoutException
+                    </h4>
+                    <div>
+                            <pre>Expected condition failed: waiting for By.xpath: //span[@data-date='2023-09-27'] to be enabled (tried for 5 second(s) with 100 milliseconds interval)</pre>
+                        <pre>com.co.qvision.tasks.CarRentalTask.performAs(CarRentalTask.java :29)<br />co.com.Senasoft.StepsDefinitions.CarRentalStepDefinition.youClickOnCarRentalAndInTheSearchSessionFillOutTheRequiredData(CarRentalStepDefinition.java :27)<br />cucumber.runner.Runner.runPickle(Runner.java :80)<br /></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource2876091825668292967.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="95d7fdf771cea098c3ac77692907bc03134b22e00b39aa8f6f9cf68553877dfc.png" title=" Example: {city=pereira}" width="1920"/>
-                <img src="95d7fdf771cea098c3ac77692907bc03134b22e00b39aa8f6f9cf68553877dfc.png" title=" Given he user enters the website" width="1920"/>
-                <img src="95d7fdf771cea098c3ac77692907bc03134b22e00b39aa8f6f9cf68553877dfc.png" title=" User opens the https://www.booking.com/index.es.html?label=es-co-booking-desktop-QLGRvVsXz2aps*_lUmd*1gS652804041077%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-102518000%3Alp1003665%3Ali%3Adec%3Adm&amp;gclid=CjwKCAjwgsqoBhBNEiwAwe5w077TiV0TUdUzYfYh1-6VJKeaKbN97OQud8lSIPgn5wWrkdyjhOGSYRoCtLEQAvD_BwE&amp;aid=2336990&amp;sid=91faa5accfec39eacfbf6ac0adf3e1d7" width="1920"/>
-                <img src="95d7fdf771cea098c3ac77692907bc03134b22e00b39aa8f6f9cf68553877dfc.png" title=" Given he user enters the website (completed)" width="1920"/>
-                <img src="95d7fdf771cea098c3ac77692907bc03134b22e00b39aa8f6f9cf68553877dfc.png" title=" When you click on car rental and in the search session fill out the required data
+                <img src="588462ed284e0c455cd54ebf23045aac1e87587b33bdbc6f16b5317fb6791e6f.png" title=" Example: {city=pereira}" width="1920"/>
+                <img src="588462ed284e0c455cd54ebf23045aac1e87587b33bdbc6f16b5317fb6791e6f.png" title=" Given he user enters the website" width="1920"/>
+                <img src="588462ed284e0c455cd54ebf23045aac1e87587b33bdbc6f16b5317fb6791e6f.png" title=" User opens the https://www.booking.com/index.es.html?label=es-co-booking-desktop-QLGRvVsXz2aps*_lUmd*1gS652804041077%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-102518000%3Alp1003665%3Ali%3Adec%3Adm&amp;gclid=CjwKCAjwgsqoBhBNEiwAwe5w077TiV0TUdUzYfYh1-6VJKeaKbN97OQud8lSIPgn5wWrkdyjhOGSYRoCtLEQAvD_BwE&amp;aid=2336990&amp;sid=91faa5accfec39eacfbf6ac0adf3e1d7" width="1920"/>
+                <img src="588462ed284e0c455cd54ebf23045aac1e87587b33bdbc6f16b5317fb6791e6f.png" title=" Given he user enters the website (completed)" width="1920"/>
+                <img src="588462ed284e0c455cd54ebf23045aac1e87587b33bdbc6f16b5317fb6791e6f.png" title=" When you click on car rental and in the search session fill out the required data
 | city |
 | pereira |" width="1920"/>
-                <img src="95d7fdf771cea098c3ac77692907bc03134b22e00b39aa8f6f9cf68553877dfc.png" title=" User car rental task" width="1920"/>
-                <img src="9e418b43d681c3d2179e73078f8983a48e43dc9bdd70ceb1c1924206896eeb89.png" title=" User clicks on CLICK EN EL BOTON" width="1920"/>
-                <img src="393eb4f5f49fcd6c8e9f9beae074c188598e342465e7217a13187f2cafe5a65c.png" title=" User clicks on CLICK EN EL BOTON (completed)" width="1920"/>
-                <img src="393eb4f5f49fcd6c8e9f9beae074c188598e342465e7217a13187f2cafe5a65c.png" title=" User clicks on CLICK EN EL BOTON alquilar coches" width="1920"/>
-                <img src="8abfb17c9274473a9f267655ed0973cf35c8574c3fa9e41eb32db3ead60139f5.png" title=" User clicks on CLICK EN EL BOTON alquilar coches (completed)" width="1920"/>
-                <img src="8abfb17c9274473a9f267655ed0973cf35c8574c3fa9e41eb32db3ead60139f5.png" title=" User clicks on da click" width="1920"/>
-                <img src="15f1dc8a3c8a07fe88fd127cdebcec703ea623db07ea58a89b2b5abc32ab8de5.png" title=" User clicks on da click (completed)" width="1920"/>
-                <img src="15f1dc8a3c8a07fe88fd127cdebcec703ea623db07ea58a89b2b5abc32ab8de5.png" title=" User enters 'city' into da click" width="1920"/>
-                <img src="eeb61fbeb5e04c128fb85617718676f8ce977ff93b59d147a1aa0c8bf9c69dbd.png" title=" User enters 'city' into da click (completed)" width="1920"/>
-                <img src="eeb61fbeb5e04c128fb85617718676f8ce977ff93b59d147a1aa0c8bf9c69dbd.png" title=" User clicks on da click" width="1920"/>
-                <img src="f368f0ec46b57fa5b807eeb67c757a4f269c83fb61ef957cc88b1dd84444c69d.png" title=" User clicks on da click (completed)" width="1920"/>
-                <img src="f368f0ec46b57fa5b807eeb67c757a4f269c83fb61ef957cc88b1dd84444c69d.png" title=" User clicks on CLICK PARA ESCOGER FECHA" width="1920"/>
-                <img src="54c65707b15029214e016674ae1e1867c828ea5c4d7a7709fdd4f0616a6afdce.png" title=" User clicks on CLICK PARA ESCOGER FECHA (completed)" width="1920"/>
-                <img src="54c65707b15029214e016674ae1e1867c828ea5c4d7a7709fdd4f0616a6afdce.png" title=" User clicks on CLICK PARA ESOCGER EL DIA" width="1920"/>
-                <img src="155272c18a1b70f220bb2b71d2535c8ab9a22dfa61d974724664c9b5296e9275.png" title=" User clicks on CLICK PARA ESOCGER EL DIA (completed)" width="1920"/>
-                <img src="155272c18a1b70f220bb2b71d2535c8ab9a22dfa61d974724664c9b5296e9275.png" title=" User clicks on CLICK PARA ESOCGER EL DIA de regreso" width="1920"/>
-                <img src="81cb253b3cde45126b11c43c09502df94f55687fa84f031cd05e37f7a77b89d0.png" title=" User clicks on CLICK PARA ESOCGER EL DIA de regreso (completed)" width="1920"/>
-                <img src="81cb253b3cde45126b11c43c09502df94f55687fa84f031cd05e37f7a77b89d0.png" title=" User clicks on CLICK PARA ESOCGER HORA" width="1920"/>
-                <img src="94fd8543490d77acaa8871b4c51dcc446ab39e04d4ed9a5db39d9b2ca078d43f.png" title=" User clicks on CLICK PARA ESOCGER HORA (completed)" width="1920"/>
-                <img src="94fd8543490d77acaa8871b4c51dcc446ab39e04d4ed9a5db39d9b2ca078d43f.png" title=" User clicks on CLICK PARA ESOCGER HORA DE REGRESOo" width="1920"/>
-                <img src="a06b5762f783d0c9bcc327d03e884d666ba10fa367a78685c543d6533e0ebd3c.png" title=" User clicks on CLICK PARA ESOCGER HORA DE REGRESOo (completed)" width="1920"/>
-                <img src="a06b5762f783d0c9bcc327d03e884d666ba10fa367a78685c543d6533e0ebd3c.png" title=" User clicks on CLICK BOTON BUSCAR" width="1920"/>
-                <img src="5ef417cd763c6e3818c891704a4a0d0671237b012006f345b320362e55135bc2.png" title=" User clicks on CLICK BOTON BUSCAR (completed)" width="1920"/>
-                <img src="6b03ae645cc7cdad2e26f54b99fe4ed59a136ea347bd7291a87f0ac5f1dcc59a.png" title=" User car rental task (completed)" width="1920"/>
-                <img src="6b03ae645cc7cdad2e26f54b99fe4ed59a136ea347bd7291a87f0ac5f1dcc59a.png" title=" When you click on car rental and in the search session fill out the required data
-| city |
-| pereira | (completed)" width="1920"/>
-                <img src="6b03ae645cc7cdad2e26f54b99fe4ed59a136ea347bd7291a87f0ac5f1dcc59a.png" title=" Then you make a successful search" width="1920"/>
-                <img src="6b03ae645cc7cdad2e26f54b99fe4ed59a136ea347bd7291a87f0ac5f1dcc59a.png" title=" Then verify car rental should be (true)" width="1920"/>
-                <img src="6b03ae645cc7cdad2e26f54b99fe4ed59a136ea347bd7291a87f0ac5f1dcc59a.png" title=" Then verify car rental should be (true) (completed)" width="1920"/>
-                <img src="6b03ae645cc7cdad2e26f54b99fe4ed59a136ea347bd7291a87f0ac5f1dcc59a.png" title=" Then you make a successful search (completed)" width="1920"/>
-                <img src="6b03ae645cc7cdad2e26f54b99fe4ed59a136ea347bd7291a87f0ac5f1dcc59a.png" title=" Example: {city=pereira} (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+                <img src="588462ed284e0c455cd54ebf23045aac1e87587b33bdbc6f16b5317fb6791e6f.png" title=" User car rental task" width="1920"/>
+                <img src="d1715963d016505d1165906bc823d568935c866ffc1d6b1e9077095d57f34a54.png" title=" User clicks on CLICK EN EL BOTON" width="1920"/>
+                <img src="04f40891d50281534fdd2eb502ce8ead3ccb7e3fad2a9fdf86f71e3f556cfe03.png" title=" User clicks on CLICK EN EL BOTON (completed)" width="1920"/>
+                <img src="04f40891d50281534fdd2eb502ce8ead3ccb7e3fad2a9fdf86f71e3f556cfe03.png" title=" User clicks on CLICK EN EL BOTON alquilar coches" width="1920"/>
+                <img src="71582cd3aa8914c35e8eaf96d663ee54abb5ddb4de82adb2edd7b8c968985d26.png" title=" User clicks on CLICK EN EL BOTON alquilar coches (completed)" width="1920"/>
+                <img src="71582cd3aa8914c35e8eaf96d663ee54abb5ddb4de82adb2edd7b8c968985d26.png" title=" User clicks on da click" width="1920"/>
+                <img src="a61a9afc980d9f4882388f34b1ba2780e401ceb902692676f7a4db1072aa0152.png" title=" User clicks on da click (completed)" width="1920"/>
+                <img src="a61a9afc980d9f4882388f34b1ba2780e401ceb902692676f7a4db1072aa0152.png" title=" User enters 'city' into da click" width="1920"/>
+                <img src="013a4a039163fa4e7924c89d005329abaded41a0144c1175d59e3dd81d7b0e16.png" title=" User enters 'city' into da click (completed)" width="1920"/>
+                <img src="013a4a039163fa4e7924c89d005329abaded41a0144c1175d59e3dd81d7b0e16.png" title=" User clicks on da click" width="1920"/>
+                <img src="91b02026deebe6c807d7ebe75e369c0187a1a0d103e9064e42840be9a01fbf5b.png" title=" User clicks on da click (completed)" width="1920"/>
+                <img src="91b02026deebe6c807d7ebe75e369c0187a1a0d103e9064e42840be9a01fbf5b.png" title=" User clicks on CLICK PARA ESCOGER FECHA" width="1920"/>
+                <img src="aa4be92bee80614abe1dc53bd7a554b1b38a1622863dec4ff4de633cd339c306.png" title=" User clicks on CLICK PARA ESCOGER FECHA (completed)" width="1920"/>
+                <img src="aa4be92bee80614abe1dc53bd7a554b1b38a1622863dec4ff4de633cd339c306.png" title=" User clicks on CLICK PARA ESOCGER EL DIA" width="1920"/>
+                <img src="b7a0b03fbaba0bce0c17601e41c28ea75483a0ef0615c2c42ddf625beb526c66.png" title=" User clicks on CLICK PARA ESOCGER EL DIA (completed): <span class='failing-color'>FAILURE</span>" width="1920"/>
             </div>
         </div>
 
