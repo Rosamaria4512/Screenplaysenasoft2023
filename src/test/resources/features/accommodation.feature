@@ -9,22 +9,32 @@ Feature: Accommodation
     Then he will have reserved a place of accommodation
 
 
+<<<<<<< HEAD
+#Completed
+  @Incompletereservation
+  Scenario: Book a failed accommodation
+=======
    Scenario: Book a failed accommodation
 
 #Completed
   @Incompletereservation
  Scenario: Book a failed accommodation
 
+>>>>>>> e136152f1939e818eb23f93a5206ed21c5384183
     Given the user Enter the website
     When he clicks on the "Accommodations" option and writes the incomplete specifications
     Then he will see an incomplete field message
 
-@ReservationbyFiltres
-  Scenario: Search Accommodations Filters successful
+  @ReservationbyFiltres
+  Scenario Outline: Search Accommodations Filters successful
     Given the user Enter the website
     When the is in the Results module and select several filters
+      | email   | password   |
+      | <email> | <password> |
     Then He will see the new results obtained by applying the filters
-
+    Examples:
+      | email                   | password   |
+      | lenovo.esucre@gmail.com | 3Felipe180 |
 
 
 
