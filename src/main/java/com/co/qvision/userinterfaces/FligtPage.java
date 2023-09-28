@@ -12,9 +12,20 @@ public class FligtPage {
     public static final Target BTN_SEEFLIGHT= Target.the("CLICK EN VER VUELOS")
             .locatedBy("//button[@data-testid='flight_card_bound_select_flight']");
     public static final Target BTN_NETX= Target.the("CLICK EN SIGUIENTE")
-            .locatedBy("(//button[@type='button'])[49]");
+            .locatedBy("(//button[@type='button'])[46]");
     public static final Target BTN_NETXCONTINUED= Target.the("CLICK EN CONTINUAR")
             .locatedBy("(//button[@type='button'])[3]");
+    public static final Target BTN_NETXCONTINUED1= Target.the("CLICK EN CONTINUAR")
+            .locatedBy(" (//button[@type='button'])[2]");
+    public static final Target TXT_NAMEA= Target.the("CAMPO PARA NOMBRE DE QUIEN RESERVA")
+            .locatedBy("//input[@name='passengers.0.firstName']");
+    public static final Target TXT_LASTNAME= Target.the("CAMPO PARA NOMBRE DE QUIEN RESERVA")
+            .locatedBy("//input[@name='passengers.0.lastName']");
+    public static final Target BTN_LIST= Target.the("CAMPO PARA NOMBRE DE QUIEN RESERVA")
+            .locatedBy("(//button[@type='button'])[6]");
+
+
+
     public static final Target TXT_EMAILC= Target.the("CAMPO PARA EMAIL")
             .locatedBy("//input[@name='booker.email']");
     public static final Target TXT_TEL= Target.the("CAMPO PAT¿RA TEL")

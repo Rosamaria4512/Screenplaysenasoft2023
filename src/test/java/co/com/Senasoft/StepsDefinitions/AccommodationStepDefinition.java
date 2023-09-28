@@ -9,11 +9,14 @@ import cucumber.api.java.en.*;
 import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Open;
+import net.serenitybdd.screenplay.actions.Switch;
 import net.serenitybdd.screenplay.actors.Cast;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.thucydides.core.annotations.Managed;
 import org.hamcrest.Matchers;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.server.handler.SwitchToWindow;
 
 
 import java.util.List;
@@ -21,6 +24,9 @@ import java.util.List;
 public class AccommodationStepDefinition {
     @Managed
     WebDriver webDriver;
+
+    public static String handle;
+
 
     @Before
     public void setup() {
@@ -37,13 +43,24 @@ public class AccommodationStepDefinition {
 
     @When("^he clicks on the Accommodations option$")
     public void heClicksOnTheAccommodationsOption() {
+        OnStage.theActorInTheSpotlight().attemptsTo(CloseMessage.closeMessage());
         OnStage.theActorInTheSpotlight().attemptsTo(SearchAccommodationTasks.searchAccommodationTasks());
+
+
+        // creamos una variable que nos permita alaamcenar la url de una pestaña y la podamos imprimir en consola
+
+        handle = webDriver.getWindowHandle();
+
+        System.out.println(handle);
+        // webDriver.switchTo().window(handle);
+
+        OnStage.theActorInTheSpotlight().attemptsTo(AccommodationTask.accommodationTask());
 
     }
 
     @When("^the search and select one of the results$")
     public void theSearchAndSelectOneOfTheResults() {
-        OnStage.theActorInTheSpotlight().attemptsTo(AccommodationTask.accommodationTask());
+
     }
 
 
@@ -71,11 +88,8 @@ public class AccommodationStepDefinition {
 
     //----------------------------------------------------------------------------------------------------------------------------------------------
     @When("^the is in the Results module and select several filters$")
-    //Aqui usamos un modelo de datos que nos permite ingresar datos desde los features con el  modulo de CredentialLoginCorrectly
-    public void theIsInTheResultsModuleAndSelectSeveralFilters(List<CredentialLoginCorrectly> credentialLoginCorrectlyList) {
-
-
-
+    public void theIsInTheResultsModuleAndSelectSeveralFilters() {
+        OnStage.theActorInTheSpotlight().attemptsTo(CloseMessage.closeMessage());
         OnStage.theActorInTheSpotlight().attemptsTo(SearchAccommodationTasks.searchAccommodationTasks());
         try {
             Thread.sleep(2000);

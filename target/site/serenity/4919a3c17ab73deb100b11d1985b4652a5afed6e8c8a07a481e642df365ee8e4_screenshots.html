@@ -132,7 +132,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 27-09-2023 17:23</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 28-09-2023 07:18</span>
     <br style="clear:left"/>
 </div>
 
@@ -173,9 +173,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="failing-color">Book a successful accommodation
+                                <span class="error-color">Book a successful accommodation
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -198,7 +198,7 @@
         <div class="table">
             <div class="row">
                 <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">Element should be enabled exception: Expected enabled element was not enabled</span>
+                    <span class="error-message error-message-title">Illegal argument exception: Superclass has no null constructors but no arguments were given</span>
                 </div>
                 <div class="col-sm-2">
                     <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
@@ -214,20 +214,13 @@
         <div class="collapse multi-collapse" id="stacktraceModal-overall">
             <div class="card">
                 <div class="card-header">
-                    <h4>net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException </h4>
+                    <h4>java.lang.IllegalArgumentException </h4>
                 </div>
                 <div class="card-body">
                     <div>
-                        <pre>com.co.qvision.tasks.AccommodationTask.performAs(AccommodationTask.java:28)<br />co.com.Senasoft.StepsDefinitions.AccommodationStepDefinition.theSearchAndSelectOneOfTheResults(AccommodationStepDefinition.java:42)<br />cucumber.runner.Runner.runPickle(Runner.java:80)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                        <pre>com.co.qvision.tasks.SearchAccommodationTasks.searchAccommodationTasks(SearchAccommodationTasks.java:62)<br />co.com.Senasoft.StepsDefinitions.AccommodationStepDefinition.heClicksOnTheAccommodationsOption(AccommodationStepDefinition.java:47)<br />✽.he clicks on the Accommodations option(src/test/resources/features/accommodation.feature:9)<br /></pre>
                     </div>
 
-                    <h4>
-                        Caused by: org.openqa.selenium.TimeoutException
-                    </h4>
-                    <div>
-                            <pre>Expected condition failed: waiting for By.xpath: //button[@id='hp_book_now_button'] to be enabled (tried for 5 second(s) with 100 milliseconds interval)</pre>
-                        <pre>com.co.qvision.tasks.AccommodationTask.performAs(AccommodationTask.java :28)<br />co.com.Senasoft.StepsDefinitions.AccommodationStepDefinition.theSearchAndSelectOneOfTheResults(AccommodationStepDefinition.java :42)<br />cucumber.runner.Runner.runPickle(Runner.java :80)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java :69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java :74)<br /></pre>
-                    </div>
                 </div>
             </div>
         </div>
@@ -235,62 +228,19 @@
 
 
                 <div class="panel-body">
-                    <a href="pagesource76329798061614202.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                    <a href="pagesource6539230560463729875.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
                 </div>
             </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="185a6e325aec5febb1cda5c8d1b0c0817655dee8d9045fd497327126ff837ec0.png" title=" Given the user Enter the website" width="1920"/>
-                <img src="185a6e325aec5febb1cda5c8d1b0c0817655dee8d9045fd497327126ff837ec0.png" title=" User opens the https://www.booking.com/" width="1920"/>
-                <img src="185a6e325aec5febb1cda5c8d1b0c0817655dee8d9045fd497327126ff837ec0.png" title=" Given the user Enter the website (completed)" width="1920"/>
-                <img src="7e5caa7d7f6b0285521fa8cc41113e6502061e995db04ad558e01d106f3efd83.png" title=" When he clicks on the Accommodations option" width="1920"/>
-                <img src="7e5caa7d7f6b0285521fa8cc41113e6502061e995db04ad558e01d106f3efd83.png" title=" User search accommodation tasks" width="1920"/>
-                <img src="7e5caa7d7f6b0285521fa8cc41113e6502061e995db04ad558e01d106f3efd83.png" title=" User clicks on Ingnorar mensaje" width="1920"/>
-                <img src="7e5caa7d7f6b0285521fa8cc41113e6502061e995db04ad558e01d106f3efd83.png" title=" User enters 'New York' into Escribir lugar de hospedaje" width="1920"/>
-                <img src="76f9c55a737a7c1d43ba6a6fd1bb86fa053fb124342b64ed1efa138ec7194307.png" title=" User enters 'New York' into Escribir lugar de hospedaje (completed)" width="1920"/>
-                <img src="76f9c55a737a7c1d43ba6a6fd1bb86fa053fb124342b64ed1efa138ec7194307.png" title=" User clicks on A&ntilde;adir fechas de alojamiento" width="1920"/>
-                <img src="1b9e0a962afdd65dfd90716ca2980369367aa0544de0156c6cbe384ed1e2caf9.png" title=" User clicks on A&ntilde;adir fechas de alojamiento (completed)" width="1920"/>
-                <img src="1b9e0a962afdd65dfd90716ca2980369367aa0544de0156c6cbe384ed1e2caf9.png" title=" User clicks on A&ntilde;adir fechas de primer chequeo" width="1920"/>
-                <img src="0451968f2bc0459eb7c8b2d2056052b50311f5a1ab754e355c430fe21b832ff1.png" title=" User clicks on A&ntilde;adir fechas de primer chequeo (completed)" width="1920"/>
-                <img src="0451968f2bc0459eb7c8b2d2056052b50311f5a1ab754e355c430fe21b832ff1.png" title=" User clicks on A&ntilde;adir fechas de ultimo chequeo" width="1920"/>
-                <img src="c847fdfc6ba0129911983b451237ed38ab9e99061c6d81f97f17b24099b5fa8d.png" title=" User clicks on A&ntilde;adir fechas de ultimo chequeo (completed)" width="1920"/>
-                <img src="c847fdfc6ba0129911983b451237ed38ab9e99061c6d81f97f17b24099b5fa8d.png" title=" User clicks on A&ntilde;adir fechas de alojamiento" width="1920"/>
-                <img src="79b20fcc3f5178a0b4a0542f8fa69a070ed10191c5b8eaee1728f1b8010b8f8b.png" title=" User clicks on A&ntilde;adir fechas de alojamiento (completed)" width="1920"/>
-                <img src="79b20fcc3f5178a0b4a0542f8fa69a070ed10191c5b8eaee1728f1b8010b8f8b.png" title=" User clicks on Agregar personas" width="1920"/>
-                <img src="9dd95cf1aa7a2a027fae7e266a0423f57dab093de9aa898a39934f8d6f63a3b8.png" title=" User clicks on Agregar personas (completed)" width="1920"/>
-                <img src="9dd95cf1aa7a2a027fae7e266a0423f57dab093de9aa898a39934f8d6f63a3b8.png" title=" User clicks on Agregar Adultos" width="1920"/>
-                <img src="e11218a6de0c8db96fb44474aff883a6cea99aab713685cec1f31d00a02de498.png" title=" User clicks on Agregar Adultos (completed)" width="1920"/>
-                <img src="e11218a6de0c8db96fb44474aff883a6cea99aab713685cec1f31d00a02de498.png" title=" User clicks on Agregar Ni&ntilde;os" width="1920"/>
-                <img src="b7555bbf68a42327f2179fd0809ebcb42c264203e575864eca1a2a0e56e8ec5f.png" title=" User clicks on Agregar Ni&ntilde;os (completed)" width="1920"/>
-                <img src="b7555bbf68a42327f2179fd0809ebcb42c264203e575864eca1a2a0e56e8ec5f.png" title=" User clicks on Agregar Edad de los ni&ntilde;os" width="1920"/>
-                <img src="4f52e23690cd1ccc31f4e72d47d5e65f4d2d667fbfc6e8a076e2d132768b0293.png" title=" User clicks on Agregar Edad de los ni&ntilde;os (completed)" width="1920"/>
-                <img src="4f52e23690cd1ccc31f4e72d47d5e65f4d2d667fbfc6e8a076e2d132768b0293.png" title=" User clicks on Escojer Edad del ni&ntilde;o 1" width="1920"/>
-                <img src="8d45cf5c1ee9124d588836420ed5acad9264520b4e79f8b620985855bc2f3f75.png" title=" User clicks on Escojer Edad del ni&ntilde;o 1 (completed)" width="1920"/>
-                <img src="8d45cf5c1ee9124d588836420ed5acad9264520b4e79f8b620985855bc2f3f75.png" title=" User clicks on Agregar personas" width="1920"/>
-                <img src="d29a19d928e7063e34c427874a9c04e014e3bf002ba9e9e184c0acec8927a1e1.png" title=" User clicks on Agregar personas (completed)" width="1920"/>
-                <img src="d29a19d928e7063e34c427874a9c04e014e3bf002ba9e9e184c0acec8927a1e1.png" title=" User clicks on Agregar Edad de los ni&ntilde;os" width="1920"/>
-                <img src="a679c9e6c08e8948220d0ce61794368a30be8c4e41b7c6b3265a17d8edeedbbc.png" title=" User clicks on Agregar Edad de los ni&ntilde;os (completed)" width="1920"/>
-                <img src="a679c9e6c08e8948220d0ce61794368a30be8c4e41b7c6b3265a17d8edeedbbc.png" title=" User clicks on Escojer Edad del ni&ntilde;o 1" width="1920"/>
-                <img src="a679c9e6c08e8948220d0ce61794368a30be8c4e41b7c6b3265a17d8edeedbbc.png" title=" User clicks on Escojer Edad del ni&ntilde;o 1 (completed)" width="1920"/>
-                <img src="a679c9e6c08e8948220d0ce61794368a30be8c4e41b7c6b3265a17d8edeedbbc.png" title=" User clicks on Escojer Cantidad de habitaciones" width="1920"/>
-                <img src="66c797a7374823724fbeff2f32bbdf3282da5d3b55c7465e1ec2ff8de89e4b01.png" title=" User clicks on Escojer Cantidad de habitaciones (completed)" width="1920"/>
-                <img src="66c797a7374823724fbeff2f32bbdf3282da5d3b55c7465e1ec2ff8de89e4b01.png" title=" User clicks on Boton guardar" width="1920"/>
-                <img src="9d0c2f7e90dcf5a63971c695403cd014793e79f9baa98e8f3b5b30df2ecc4449.png" title=" User clicks on Boton guardar (completed)" width="1920"/>
-                <img src="9d0c2f7e90dcf5a63971c695403cd014793e79f9baa98e8f3b5b30df2ecc4449.png" title=" User clicks on Boton Buscar" width="1920"/>
-                <img src="c480fe9fd07ac888979aed2aa93b8085ee6e74bf20bcfb6605ab3c33ac4a299d.png" title=" User clicks on Boton Buscar (completed)" width="1920"/>
-                <img src="50a3a44f131f28c457624c3732772c46ce54f2fe799ddce06d6acbbb9bc0df75.png" title=" User search accommodation tasks (completed)" width="1920"/>
-                <img src="50a3a44f131f28c457624c3732772c46ce54f2fe799ddce06d6acbbb9bc0df75.png" title=" When he clicks on the Accommodations option (completed)" width="1920"/>
-                <img src="50a3a44f131f28c457624c3732772c46ce54f2fe799ddce06d6acbbb9bc0df75.png" title=" And the search and select one of the results" width="1920"/>
-                <img src="50a3a44f131f28c457624c3732772c46ce54f2fe799ddce06d6acbbb9bc0df75.png" title=" User accommodation task" width="1920"/>
-                <img src="8a625acddbfd5549fcdc3c85de076dfb4f60cad6e88d3abe1f89ca708491ed9b.png" title=" User clicks on Boton para escojer el  tipo de alojamiento" width="1920"/>
-                <img src="eb6b39a9bd1d6ddca0d5cb82b3c30ebc4ae49d8bb3b010143ab2b4742ca339ef.png" title=" User clicks on Opcion de tipo de alojamiento" width="1920"/>
-                <img src="ce16419e07ae31b8984dbe0814687d587e2d80b7e46afabad6c746f32ee27115.png" title=" User clicks on Opcion de tipo de alojamiento (completed)" width="1920"/>
-                <img src="788b145b5145c9f06690f5ed00370b5560caad47b4498a322bc1da4b2efe663a.png" title=" User clicks on Seleccionar el hotel" width="1920"/>
-                <img src="788b145b5145c9f06690f5ed00370b5560caad47b4498a322bc1da4b2efe663a.png" title=" User clicks on Seleccionar el hotel (completed)" width="1920"/>
-                <img src="788b145b5145c9f06690f5ed00370b5560caad47b4498a322bc1da4b2efe663a.png" title=" User clicks on ver informacion del hotel" width="1920"/>
-                <img src="289ca9ba894d8fba6e7c5f0c11dfbdcb40d2704d4fc09a01427d62acc085244a.png" title=" User clicks on ver informacion del hotel (completed)" width="1920"/>
-                <img src="ed2f42279c1a3eed4f4e57c7ab3d89a707028de4ee5f8876feed03d41e24d722.png" title=" User clicks on HACER LA RESERVA DEL HOTEL" width="1920"/>
-                <img src="ed2f42279c1a3eed4f4e57c7ab3d89a707028de4ee5f8876feed03d41e24d722.png" title=" User clicks on HACER LA RESERVA DEL HOTEL (completed): <span class='failing-color'>FAILURE</span>" width="1920"/>
+                <img src="715c5913470cd914cbce7c52b57d0c4d52aa8aa2c93a52dde183b90556480e10.png" title=" Given the user Enter the website" width="1366"/>
+                <img src="715c5913470cd914cbce7c52b57d0c4d52aa8aa2c93a52dde183b90556480e10.png" title=" User opens the https://www.booking.com/" width="1366"/>
+                <img src="715c5913470cd914cbce7c52b57d0c4d52aa8aa2c93a52dde183b90556480e10.png" title=" Given the user Enter the website (completed)" width="1366"/>
+                <img src="48b9f0a02a39d59d8657ca6e4f1b9ed3b8829cd1bd573662b609edccb9d0d575.png" title=" When he clicks on the Accommodations option" width="1366"/>
+                <img src="48b9f0a02a39d59d8657ca6e4f1b9ed3b8829cd1bd573662b609edccb9d0d575.png" title=" User close message" width="1366"/>
+                <img src="48b9f0a02a39d59d8657ca6e4f1b9ed3b8829cd1bd573662b609edccb9d0d575.png" title=" User clicks on Ignorar mensaje" width="1366"/>
+                <img src="48b9f0a02a39d59d8657ca6e4f1b9ed3b8829cd1bd573662b609edccb9d0d575.png" title=" User close message (completed)" width="1366"/>
+                <img src="22ca3d2b61f35d70bcb58a5dc1a9a519697ebec13267dc2d805a380ddbb78404.png" title=" When he clicks on the Accommodations option (completed): <span class='error-color'>ERROR</span>" width="1366"/>
             </div>
         </div>
 
