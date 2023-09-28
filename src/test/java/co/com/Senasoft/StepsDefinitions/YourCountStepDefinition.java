@@ -21,12 +21,10 @@ public class YourCountStepDefinition {
         credentialLoginCorrectly = credentialLoginCorrectlyList.get(0);
 
         OnStage.theActorInTheSpotlight().attemptsTo(EnterEmailTask.enterEmailTask(credentialLoginCorrectly));
-<<<<<<< HEAD
+
       //  OnStage.theActorInTheSpotlight().attemptsTo(OpenModuleSaveTask.openModuleSaveTask());
         //OnStage.theActorInTheSpotlight().attemptsTo(AddFavoritesTask.addFavoritesTask());
-=======
 
->>>>>>> faf9e9c99e2a5385957e6bfb95539025dd1f4eb7
 
 
     }

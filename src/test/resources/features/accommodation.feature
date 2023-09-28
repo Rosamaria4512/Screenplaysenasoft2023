@@ -4,7 +4,6 @@ Feature: Accommodation
 
   Background:
     Given the user Enter the website
-
   @Reservationbysearch
   Scenario: Book a successful accommodation
     When he clicks on the Accommodations option
