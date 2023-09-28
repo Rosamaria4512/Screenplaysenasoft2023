@@ -10,8 +10,8 @@ public class   AccommodationPage {
     public static final Target BTN_IGNORE=Target.the("Ignorar mensaje").locatedBy("(//button[@class='a83ed08757 c21c56c305 f38b6daa18 d691166b09 ab98298258 deab83296e f4552b6561'])");
     public static final Target TXT_PLACE=Target.the("Escribir lugar de hospedaje").locatedBy("//input[@name='ss']");
     public static final Target SPAN_DATE=Target.the("Añadir fechas de alojamiento").locatedBy("//div[@class='b91c144835']");
-    public static final Target TXT_CHECK_IN=Target.the("Añadir fechas de primer chequeo").locatedBy("(//span[text()='27'])[1]");
-    public static final Target TXT_CHECK_OUT=Target.the("Añadir fechas de ultimo chequeo").locatedBy("(//span[text()='3'])[2]");
+    public static final Target TXT_CHECK_IN=Target.the("Añadir fechas de primer chequeo").locatedBy("(//span[text()='30'])[1]");
+    public static final Target TXT_CHECK_OUT=Target.the("Añadir fechas de ultimo chequeo").locatedBy("(//span[text()='6'])[2]");
     public static final Target BTN_PERSONS=Target.the("Agregar personas").locatedBy("//button[@data-testid='occupancy-config']");
     public static final Target SPAN_ADULTS=Target.the("Agregar Adultos").locatedBy("//body/div[@id='indexsearch']/div[2]/div[1]/form[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/button[2]");
     public static final Target SPAN_CHILDREN=Target.the("Agregar Niños").locatedBy("//body/div[@id='indexsearch']/div[2]/div[1]/form[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/button[2]");
@@ -20,7 +20,7 @@ public class   AccommodationPage {
     public static final Target SLT_EDAD_2=Target.the("Agregar Edad de los niños").locatedBy("(//select[@name='age'])[2]");
     public static final Target OPT_EDAD_2=Target.the("Escojer Edad del niño 2").locatedBy("(//option[@value='4'])[2]");
     public static final Target SPAN_ROMS=Target.the("Escojer Cantidad de habitaciones").locatedBy("(//span[@class='eedba9e88a'])[7]");
-    public static final Target BTN_DONE=Target.the("Boton guardar").locatedBy("(//button[@type='button'])[15]");
+    public static final Target BTN_DONE=Target.the("Boton guardar").locatedBy("//button//span[text()='Listo']");
     public static final Target BTN_SEARCH=Target.the("Boton Buscar").locatedBy("//button[@type='submit']");
 
     public static final Target CARD_PRODUCT=Target.the("Targeta del producto").locatedBy("(//div[@data-testid='property-card'])[1]");

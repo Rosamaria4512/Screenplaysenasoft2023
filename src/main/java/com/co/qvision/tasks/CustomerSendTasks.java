@@ -9,11 +9,6 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 
 public class CustomerSendTasks implements Task {
-    TextMessage textMessage;
-
-    public CustomerSendTasks(TextMessage textMessage) {
-        this.textMessage = textMessage;
-    }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
@@ -26,7 +21,8 @@ public class CustomerSendTasks implements Task {
         }
     }
 
-    public static CustomerSendTasks customerSendTasks(TextMessage textMessage){
-        return Tasks.instrumented(CustomerSendTasks.class,textMessage);
+
+    public static CustomerSendTasks customerSendTasks(){
+        return Tasks.instrumented(CustomerSendTasks.class);
     }
 }

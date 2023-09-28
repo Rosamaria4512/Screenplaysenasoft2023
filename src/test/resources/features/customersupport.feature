@@ -6,5 +6,5 @@ Feature: Customer Support
 
   @SeeInformatioAboutAProblem
   Scenario: get information
-    When When the user enters the Customer Service module and selects the service to consult
-    Then the user will find information about his problem.
+    When the user enters the Customer Service module and selects the service to consult
+    Then the user will find information about his problem

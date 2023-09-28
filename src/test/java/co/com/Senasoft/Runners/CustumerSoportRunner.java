@@ -10,8 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/customersupport.feature",
         snippets = SnippetType.CAMELCASE,
         glue = "co.com.Senasoft.StepsDefinitions",
-        plugin = "pretty",
-        tags ="@SeeInformatioAboutAProblem"
+        plugin = "pretty"
 
 
 )

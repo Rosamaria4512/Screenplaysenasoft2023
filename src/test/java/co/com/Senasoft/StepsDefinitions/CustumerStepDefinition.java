@@ -15,17 +15,16 @@ import java.util.List;
 
 public class CustumerStepDefinition {
     @When("^The user enters their rating on the website and presses the Submit button$")
-    public void theUserEntersTheirRatingOnTheWebsiteAndPressesTheSubmitButton(List<TextMessage>textMessageList) {
-        TextMessage textMessage;
-        textMessage=textMessageList.get(0);
+    public void theUserEntersTheirRatingOnTheWebsiteAndPressesTheSubmitButton() {
+
         OnStage.theActorInTheSpotlight().attemptsTo(CloseMessagee.closeMessage());
-        OnStage.theActorInTheSpotlight().attemptsTo(CustomerSendTasks.customerSendTasks(textMessage));
+        OnStage.theActorInTheSpotlight().attemptsTo(CustomerSendTasks.customerSendTasks());
     }
 
 
     @Then("^the user will have submitted a rating of the website$")
     public void theUserWillHaveSubmittedARatingOfTheWebsite() {
-    OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerifyModuleCustumer.verifyMessaggeSend(), Matchers.equalTo(Boolean.FALSE)));
+    OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerifyModuleCustumer.verifyMessaggeSend(), Matchers.equalTo(Boolean.TRUE)));
 
     }
 

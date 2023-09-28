@@ -11,8 +11,7 @@ import org.junit.runner.RunWith;
         snippets = SnippetType.CAMELCASE,
         glue = "co.com.Senasoft.StepsDefinitions",
         strict = false,
-        plugin = "pretty",
-        tags = "@AddItems"
+        plugin = "pretty"
 
 )
 public class YourCount {
