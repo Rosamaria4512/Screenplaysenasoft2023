@@ -2,11 +2,18 @@
 <project version="4">
   <component name="GradleMigrationSettings" migrationVersion="1" />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0ae3bd9daee1499735ab7fda198f3a046872809d
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../gradle-8.2.1" />
+=======
         <option name="gradleJvm" value="#JAVA_HOME" />
+>>>>>>> 0ae3bd9daee1499735ab7fda198f3a046872809d
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -15,6 +22,9 @@
       </GradleProjectSettings>
     </option>
   </component>
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> faf9e9c99e2a5385957e6bfb95539025dd1f4eb7
+>>>>>>> 0ae3bd9daee1499735ab7fda198f3a046872809d
 </project>

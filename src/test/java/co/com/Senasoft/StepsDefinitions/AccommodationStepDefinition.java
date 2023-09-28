@@ -11,6 +11,7 @@ import cucumber.api.java.en.*;
 import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Open;
+import net.serenitybdd.screenplay.actions.OpenAt;
 import net.serenitybdd.screenplay.actions.Switch;
 import net.serenitybdd.screenplay.actors.Cast;
 import net.serenitybdd.screenplay.actors.OnStage;
@@ -56,7 +57,8 @@ public class AccommodationStepDefinition {
 
         handle = webDriver.getWindowHandle();
 
-        System.out.println(handle);
+        System.out.println("URL DE LA VENTANA "+handle);
+
         // webDriver.switchTo().window(handle);
 
         OnStage.theActorInTheSpotlight().attemptsTo(AccommodationTask.accommodationTask());

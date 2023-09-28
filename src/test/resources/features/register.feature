@@ -3,6 +3,7 @@ Feature:Register
 
   Background:
     Given he user enters the website
+#HECHO
 
   @registersuccesfully
   Scenario Outline: Register Succesfully
@@ -18,6 +19,7 @@ Feature:Register
       | elfgto@outlock.com        | 4512*       | 4512*                 |
 
 
+#HECHO
 
   @incorrectregistration
   Scenario: incorrect registratio

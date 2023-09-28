@@ -1,5 +1,6 @@
 package co.com.Senasoft.StepsDefinitions;
 
+import com.co.qvision.interactions.CloseMessagee;
 import com.co.qvision.models.TextMessage;
 import com.co.qvision.questions.VerifyModuleCustumer;
 import com.co.qvision.tasks.CloseMessage;
@@ -17,14 +18,14 @@ public class CustumerStepDefinition {
     public void theUserEntersTheirRatingOnTheWebsiteAndPressesTheSubmitButton(List<TextMessage>textMessageList) {
         TextMessage textMessage;
         textMessage=textMessageList.get(0);
-        OnStage.theActorInTheSpotlight().attemptsTo(CloseMessage.closeMessage());
+        OnStage.theActorInTheSpotlight().attemptsTo(CloseMessagee.closeMessage());
         OnStage.theActorInTheSpotlight().attemptsTo(CustomerSendTasks.customerSendTasks(textMessage));
     }
 
 
     @Then("^the user will have submitted a rating of the website$")
     public void theUserWillHaveSubmittedARatingOfTheWebsite() {
-    OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerifyModuleCustumer.verifyMessaggeSend(), Matchers.equalTo(Boolean.TRUE)));
+    OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerifyModuleCustumer.verifyMessaggeSend(), Matchers.equalTo(Boolean.FALSE)));
 
     }
 

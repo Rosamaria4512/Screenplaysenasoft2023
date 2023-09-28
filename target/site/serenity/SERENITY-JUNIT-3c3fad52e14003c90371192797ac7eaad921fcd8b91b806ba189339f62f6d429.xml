@@ -1,8 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Customer Support" skipped="0" tests="1" time="26.38" timestamp="2023-09-28 01:03:57"><testcase name="Message Send Successfult"><failure message="&#10;Expected: &lt;true&gt;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">
-Expected: &lt;true&gt;
-     but: was &lt;false&gt;</failure><system-err>
-Expected: &lt;true&gt;
-     but: was &lt;false&gt;&#13;
-co.com.Senasoft.StepsDefinitions.CustumerStepDefinition.theUserWillHaveSubmittedARatingOfTheWebsite(CustumerStepDefinition.java:27)&#13;
-✽.the user will have submitted a rating of the website(src/test/resources/features/customer.feature:12)&#13;
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Customer Support" skipped="0" tests="1" time="41.33" timestamp="2023-09-28 09:02:58"><testcase name="Message Send Successfult"/></testsuite>

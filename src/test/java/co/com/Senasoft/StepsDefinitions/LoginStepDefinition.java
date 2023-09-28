@@ -3,6 +3,7 @@ package co.com.Senasoft.StepsDefinitions;
 import com.co.qvision.models.CredentialLoginCorrectly;
 import com.co.qvision.models.DataLoginIncomplete;
 import com.co.qvision.models.DataWrongLogin;
+import com.co.qvision.questions.VerifyLoginCorrect;
 import com.co.qvision.questions.VerifyLoginIncomplete;
 import com.co.qvision.questions.VerifyWrongLogin;
 import com.co.qvision.questions.Verifyfligh;
@@ -61,6 +62,13 @@ public class LoginStepDefinition {
 
     @Then("^he entry succesfully$")
     public void heEntrySuccesfully() {
+
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerifyLoginCorrect.logincorrect()
+                , Matchers.equalTo(Boolean.TRUE)));
+
+        System.out.println("Hubo un inicio de sesion Correcto con validacion correcta");
+
+
 
 
     }
