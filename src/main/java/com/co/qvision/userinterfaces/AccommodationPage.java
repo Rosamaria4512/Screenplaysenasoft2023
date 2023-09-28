@@ -2,7 +2,7 @@ package com.co.qvision.userinterfaces;
 
 import net.serenitybdd.screenplay.targets.Target;
 
-public class    AccommodationPage {
+public class   AccommodationPage {
 
     //En este modulo vamos a localizar cada uno de los elementos,los cuales se utilizaran para interactuar con ellos y asi poder usarlos
 
