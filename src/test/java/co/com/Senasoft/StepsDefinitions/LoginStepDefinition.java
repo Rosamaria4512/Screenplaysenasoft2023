@@ -5,6 +5,7 @@ import com.co.qvision.models.DataLoginIncomplete;
 import com.co.qvision.models.DataWrongLogin;
 import com.co.qvision.questions.VerifyLoginIncomplete;
 import com.co.qvision.questions.VerifyWrongLogin;
+import com.co.qvision.questions.Verifyfligh;
 import com.co.qvision.tasks.LoginCorrecTask;
 import com.co.qvision.tasks.LoginIncompleteTasks;
 import com.co.qvision.tasks.RegisterIncorrectlyTask;
@@ -60,6 +61,8 @@ public class LoginStepDefinition {
 
     @Then("^he entry succesfully$")
     public void heEntrySuccesfully() {
+   OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Verifyfligh.search()
+        , Matchers.is("Hola ")));
 
     }
 

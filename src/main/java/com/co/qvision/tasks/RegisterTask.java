@@ -8,6 +8,8 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 
+import java.sql.Driver;
+
 public class RegisterTask implements Task {
 
     DataRegister dataRegister;
@@ -28,6 +30,7 @@ public class RegisterTask implements Task {
                 Enter.theValue(dataRegister.getPassword()).into(RegisterPage.TXT_PASSWORD),
                 Enter.theValue(dataRegister.getConfirmation_password()).into(RegisterPage.TXT_CONFIRMED_PAASWORD),
                 Click.on(RegisterPage.BTN_CREATE));
+
 
 
     }
