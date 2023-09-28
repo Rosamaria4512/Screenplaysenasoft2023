@@ -25,8 +25,6 @@ public class AccommodationTask implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-
-
         actor.attemptsTo(Click.on(SearchForTypePage.SLT_TYPE));
         try {Thread.sleep(5000);} catch (InterruptedException e) {throw new RuntimeException(e);}
 

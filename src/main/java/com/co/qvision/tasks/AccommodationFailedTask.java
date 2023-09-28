@@ -14,7 +14,6 @@ public class AccommodationFailedTask implements Task {
         //Les asignamos una accion, como de recibir texto o u click
 
         actor.attemptsTo(Click.on(AccommodationPage.BTN_IGNORE));
-
         actor.attemptsTo(Click.on(AccommodationPage.BTN_PERSONS));
         actor.attemptsTo(Click.on(AccommodationPage.SPAN_ADULTS));
         actor.attemptsTo(Click.on(AccommodationPage.SPAN_CHILDREN));
