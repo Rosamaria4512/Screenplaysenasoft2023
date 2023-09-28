@@ -15,8 +15,10 @@ public class LoginCorrectPage {
     public static final Target TXT_PASSWORD= Target.the("campo para ingresar contrasena")
             .locatedBy("//*[@id='password']");
 
-    public static final Target BTN_= Target.the("dar clicnk en inicio de sesion ")
+    public static final Target BTN_SEND=Target.the("dar clicnk en inicio de sesion ")
             .locatedBy("//button[@type='submit']");
 
+    public static final Target BTN_SEND_VLT=Target.the("Validar botones")
+            .locatedBy("(//button[@type='button'])[3]");
 
 }

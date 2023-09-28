@@ -22,8 +22,8 @@ public class FlightStepDefinition {
 
     @Then("^the user will be able to see a message about their reservation\\.$")
     public void theUserWillBeAbleToSeeAMessageAboutTheirReservation() {
- OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Verifyfligh.search()
-        , Matchers.is("No completada")));
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Verifyfligh.search()
+                , Matchers.is("Hola ")));
 
 
     }

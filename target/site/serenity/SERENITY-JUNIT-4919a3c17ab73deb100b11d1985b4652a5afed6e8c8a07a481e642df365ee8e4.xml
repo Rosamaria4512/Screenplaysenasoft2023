@@ -1,5 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Accommodation" skipped="0" tests="1" time="15.97" timestamp="2023-09-28 07:18:51"><testcase name="Book a successful accommodation"><error message="Superclass has no null constructors but no arguments were given" type="java.lang.IllegalArgumentException">Superclass has no null constructors but no arguments were given</error><system-err>Superclass has no null constructors but no arguments were given&#13;
-com.co.qvision.tasks.SearchAccommodationTasks.searchAccommodationTasks(SearchAccommodationTasks.java:62)&#13;
-co.com.Senasoft.StepsDefinitions.AccommodationStepDefinition.heClicksOnTheAccommodationsOption(AccommodationStepDefinition.java:47)&#13;
-✽.he clicks on the Accommodations option(src/test/resources/features/accommodation.feature:9)&#13;
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Accommodation" skipped="0" tests="3" time="125.74" timestamp="2023-09-28 08:28:33"><testcase name="Book a successful accommodation"/></testsuite>

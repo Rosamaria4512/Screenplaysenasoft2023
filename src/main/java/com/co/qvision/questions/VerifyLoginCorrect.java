@@ -11,7 +11,7 @@ public class VerifyLoginCorrect implements Question<Boolean> {
     // ESTA clase nos permite darle validacion a nuestros escenarios
     @Override
     public Boolean answeredBy(Actor actor) {
-        return Visibility.of(LoginCorrectPage.BTN_).viewedBy(actor).asBoolean();
+        return Visibility.of(LoginCorrectPage.BTN_SEND_VLT).viewedBy(actor).asBoolean();
     }
 
     //metodo para poder instanciar nuestra validacion en los stepsdefinition

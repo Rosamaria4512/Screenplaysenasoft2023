@@ -1,7 +1,7 @@
 Feature: Customer Support
   I need to rate the application
 
-  #HECHO
+  #PENDIETE
   Background:
     Given the user Enter the website
   @SendMessage

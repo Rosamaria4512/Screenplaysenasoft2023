@@ -29,7 +29,7 @@ public class LoginCorrecTask implements Task {
                 Enter.theValue(credentialLoginCorrectly.getEmail()).into(LoginCorrectPage.TXT_EMAIL),
                 Click.on(LoginCorrectPage.BTN_CONTINUED),
                 Enter.theValue(credentialLoginCorrectly.getPassword()).into(LoginCorrectPage.TXT_PASSWORD),
-                Click.on(LoginCorrectPage.BTN_));
+                Click.on(LoginCorrectPage.BTN_SEND));
         try {Thread.sleep(3000);} catch (InterruptedException e) {throw new RuntimeException(e);}
 
 
