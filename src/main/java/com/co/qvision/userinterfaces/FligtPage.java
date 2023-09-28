@@ -8,7 +8,7 @@ public class FligtPage {
     public static final Target BTN_FLIGHT= Target.the("CLICK EN EL VUELOS")
             .locatedBy("//a[@id='flights']");
     public static final Target BTN_IMAGE= Target.the("CLICK EN UNA IMAGEN")
-            .locatedBy("//img[@class='Image-module__image___hShGQ Image-module__image--content-mode-fill___x6Ff3']");
+            .locatedBy("(//img[@class='Image-module__image___hShGQ Image-module__image--content-mode-fill___x6Ff3'])[3]");
     public static final Target BTN_SEEFLIGHT= Target.the("CLICK EN VER VUELOS")
             .locatedBy("//button[@data-testid='flight_card_bound_select_flight']");
     public static final Target BTN_NETX= Target.the("CLICK EN SIGUIENTE")
