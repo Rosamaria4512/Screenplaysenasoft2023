@@ -1,5 +1,7 @@
 package co.com.Senasoft.StepsDefinitions;
 
+import com.co.qvision.interactions.CloseMessagee;
+import com.co.qvision.interactions.OpenLoginInteraction;
 import com.co.qvision.models.CredentialLoginCorrectly;
 import com.co.qvision.questions.VerifyElementDelete;
 import com.co.qvision.tasks.*;
@@ -13,20 +15,12 @@ import java.util.List;
 public class YourCountStepDefinition {
     @When("^the user selects items for favorites$")
     public void theUserSelectsItemsForFavorites(List<CredentialLoginCorrectly> credentialLoginCorrectlyList) {
-
-        OnStage.theActorInTheSpotlight().attemptsTo(CloseMessage.closeMessage());
-        OnStage.theActorInTheSpotlight().attemptsTo(OpenLoginTasks.openLoginTasks());
-
+//en este when estamos llamando una interacion
+        OnStage.theActorInTheSpotlight().attemptsTo(CloseMessagee.closeMessage());
+        OnStage.theActorInTheSpotlight().attemptsTo(OpenLoginInteraction.openLoginInteraction());
         CredentialLoginCorrectly credentialLoginCorrectly;
         credentialLoginCorrectly = credentialLoginCorrectlyList.get(0);
-
         OnStage.theActorInTheSpotlight().attemptsTo(EnterEmailTask.enterEmailTask(credentialLoginCorrectly));
-
-      //  OnStage.theActorInTheSpotlight().attemptsTo(OpenModuleSaveTask.openModuleSaveTask());
-        //OnStage.theActorInTheSpotlight().attemptsTo(AddFavoritesTask.addFavoritesTask());
-
-
-
     }
 
 

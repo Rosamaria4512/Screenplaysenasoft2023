@@ -53,7 +53,7 @@ public class AccommodationStepDefinition {
         OnStage.theActorInTheSpotlight().attemptsTo(SearchAccommodationTasks.searchAccommodationTasks(dataAccommodation));
 
 
-        // creamos una variable que nos permita alaamcenar la url de una pestaña y la podamos imprimir en consola
+        // creamos una variable que nos permita almacenar la url de una pestaña y la podamos imprimir en consola
 
         handle = webDriver.getWindowHandle();
 
