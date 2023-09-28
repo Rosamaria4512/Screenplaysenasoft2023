@@ -1,6 +1,7 @@
 package com.co.qvision.tasks;
 
 import com.co.qvision.userinterfaces.AccommodationPage;
+import com.co.qvision.userinterfaces.SearchForTypePage;
 import com.sun.javafx.scene.control.skin.TableRowSkin;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -13,19 +14,19 @@ public class AccommodationTask implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-        actor.attemptsTo(Click.on(AccommodationPage.SLT_TYPE));
+        actor.attemptsTo(Click.on(SearchForTypePage.SLT_TYPE));
         try {Thread.sleep(2000);} catch (InterruptedException e) {throw new RuntimeException(e);}
 
-        actor.attemptsTo(Click.on(AccommodationPage.OPT_TYPE));
+        actor.attemptsTo(Click.on(SearchForTypePage.OPT_TYPE));
         try {Thread.sleep(2000);} catch (InterruptedException e) {throw new RuntimeException(e);}
 
-        actor.attemptsTo(Click.on(AccommodationPage.SLT_OPTION_HOTEL));
+        actor.attemptsTo(Click.on(SearchForTypePage.SLT_OPTION_HOTEL));
         try {Thread.sleep(2000);} catch (InterruptedException e) {throw new RuntimeException(e);}
 
-        actor.attemptsTo(Click.on(AccommodationPage.A_SEE_HOTEL));
+        actor.attemptsTo(Click.on(SearchForTypePage.A_SEE_HOTEL));
         try {Thread.sleep(2000);} catch (InterruptedException e) {throw new RuntimeException(e);}
 
-        actor.attemptsTo(Click.on(AccommodationPage.BTN_RESERVE));
+        actor.attemptsTo(Click.on(SearchForTypePage.BTN_RESERVE));
         try {Thread.sleep(2000);} catch (InterruptedException e) {throw new RuntimeException(e);}
 
     }

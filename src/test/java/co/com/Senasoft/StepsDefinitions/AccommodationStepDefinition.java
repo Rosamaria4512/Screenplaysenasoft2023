@@ -15,6 +15,7 @@ import net.thucydides.core.annotations.Managed;
 import org.hamcrest.Matchers;
 import org.openqa.selenium.WebDriver;
 
+
 import java.util.List;
 
 public class AccommodationStepDefinition {
@@ -59,6 +60,7 @@ public class AccommodationStepDefinition {
     @When("^he clicks on the \"([^\"]*)\" option and writes the incomplete specifications$")
     public void heClicksOnTheOptionAndWritesTheIncompleteSpecifications(String arg1) {
         OnStage.theActorInTheSpotlight().attemptsTo(AccommodationFailedTask.accommodationFailedTask());
+     //   Switch.toWindow();
     }
 
     @Then("^he will see an incomplete field message$")
@@ -72,8 +74,7 @@ public class AccommodationStepDefinition {
     //Aqui usamos un modelo de datos que nos permite ingresar datos desde los features con el  modulo de CredentialLoginCorrectly
     public void theIsInTheResultsModuleAndSelectSeveralFilters(List<CredentialLoginCorrectly> credentialLoginCorrectlyList) {
 
-        CredentialLoginCorrectly credentialLoginCorrectly;
-        credentialLoginCorrectly = credentialLoginCorrectlyList.get(0);
+
 
         OnStage.theActorInTheSpotlight().attemptsTo(SearchAccommodationTasks.searchAccommodationTasks());
         try {
@@ -82,9 +83,7 @@ public class AccommodationStepDefinition {
             throw new RuntimeException(e);
         }
         OnStage.theActorInTheSpotlight().attemptsTo(SearchByFiltersTask.searchByFiltersTask());
-        OnStage.theActorInTheSpotlight().attemptsTo(AddFavoritesTask.addFavoritesTask());
-        OnStage.theActorInTheSpotlight().attemptsTo(LoginCorrecTask.incomplete(credentialLoginCorrectly));
-        OnStage.theActorInTheSpotlight().attemptsTo(OpenModuleSaveTask.openModuleSaveTask());
+
 
 
     }

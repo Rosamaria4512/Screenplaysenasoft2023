@@ -13,7 +13,6 @@ public class SearchAccommodationTasks implements Task {
 
         //Aqui comenzamos a usar los elementos que logramos localizar en el Archivo de Accommodation
         //Les asignamos una accion, como de recibir texto o u vlick
-        actor.attemptsTo(Click.on(AccommodationPage.BTN_IGNORE));
         //Este metodo se usa para controlar el tiempo entre cada  paso se realise para que la automatizacion se un poco mas pausada
 
         actor.attemptsTo(Enter.keyValues("New York").into(AccommodationPage.TXT_PLACE));
