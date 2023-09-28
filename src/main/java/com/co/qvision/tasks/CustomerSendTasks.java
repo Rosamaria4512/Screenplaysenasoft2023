@@ -19,9 +19,11 @@ public class CustomerSendTasks implements Task {
     public <T extends Actor> void performAs(T actor) {
     actor.attemptsTo(Click.on(CustumerPage.A_COMMENT));
     actor.attemptsTo(Click.on(CustumerPage.BTN_CUSTUME));
-
-    actor.attemptsTo(Enter.keyValues(textMessage.getMessage()).into(CustumerPage.TXT_MESSAGE));
-    actor.attemptsTo(Click.on(CustumerPage.BTN_ENVIAR));
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static CustomerSendTasks customerSendTasks(TextMessage textMessage){

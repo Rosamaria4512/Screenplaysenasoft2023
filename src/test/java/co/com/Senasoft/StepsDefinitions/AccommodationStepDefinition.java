@@ -71,11 +71,8 @@ public class AccommodationStepDefinition {
 
     //----------------------------------------------------------------------------------------------------------------------------------------------
     @When("^the is in the Results module and select several filters$")
-    //Aqui usamos un modelo de datos que nos permite ingresar datos desde los features con el  modulo de CredentialLoginCorrectly
-    public void theIsInTheResultsModuleAndSelectSeveralFilters(List<CredentialLoginCorrectly> credentialLoginCorrectlyList) {
-
-
-
+    public void theIsInTheResultsModuleAndSelectSeveralFilters() {
+        OnStage.theActorInTheSpotlight().attemptsTo(CloseMessage.closeMessage());
         OnStage.theActorInTheSpotlight().attemptsTo(SearchAccommodationTasks.searchAccommodationTasks());
         try {
             Thread.sleep(2000);
