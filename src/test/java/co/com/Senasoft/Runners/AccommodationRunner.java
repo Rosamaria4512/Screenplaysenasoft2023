@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/accommodation.feature",
         glue = "co.com.Senasoft.StepsDefinitions",
         snippets = SnippetType.CAMELCASE,
-        tags = "@ReservationbyFiltres"
+        tags = "@Reservationbysearch"
 )
 public class AccommodationRunner {
 }

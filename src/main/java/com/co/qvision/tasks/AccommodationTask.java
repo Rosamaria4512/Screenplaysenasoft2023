@@ -23,9 +23,9 @@ public class AccommodationTask implements Task {
         try {Thread.sleep(2000);} catch (InterruptedException e) {throw new RuntimeException(e);}
 
         actor.attemptsTo(Click.on(AccommodationPage.A_SEE_HOTEL));
-        try {Thread.sleep(2000);} catch (InterruptedException e) {throw new RuntimeException(e);}
+        try {Thread.sleep(15000);} catch (InterruptedException e) {throw new RuntimeException(e);}
 
-        actor.attemptsTo(Click.on(AccommodationPage.BTN_RESERVE));
+        actor.attemptsTo(Click.on(AccommodationPage.BTN_RESERV));
         try {Thread.sleep(2000);} catch (InterruptedException e) {throw new RuntimeException(e);}
 
     }

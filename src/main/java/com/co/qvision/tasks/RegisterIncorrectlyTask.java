@@ -2,6 +2,7 @@ package com.co.qvision.tasks;
 
 import com.co.qvision.models.DataRegister;
 import com.co.qvision.models.DataRegisterIncorrectly;
+import com.co.qvision.userinterfaces.RegisterIncorrectlyPage;
 import com.co.qvision.userinterfaces.RegisterPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -23,9 +24,9 @@ public class RegisterIncorrectlyTask implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Click.on(RegisterPage.BTN),
-                Click.on(RegisterPage.BTN_REGISTER),
-                Enter.theValue(dataRegisterIncorrectly.getEmail()).into(RegisterPage.TXT_EMAIL),
-                Click.on(RegisterPage.BTN_CONTINUED));
+                Click.on(RegisterIncorrectlyPage.BTN_REGISTER),
+                Enter.theValue(dataRegisterIncorrectly.getEmail()).into(RegisterIncorrectlyPage.TXT_EMAIL),
+                Click.on(RegisterIncorrectlyPage.BTN_CONTINUED));
         try {Thread.sleep(3000);} catch (InterruptedException e) {throw new RuntimeException(e);}
 
     }
